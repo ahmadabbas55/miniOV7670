@@ -1,0 +1,61 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue Feb 10 19:38:52 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "TMDSn<0>" LOCATE = SITE "A13" LEVEL 1;
+COMP "TMDSn<1>" LOCATE = SITE "A12" LEVEL 1;
+COMP "TMDSn<2>" LOCATE = SITE "A11" LEVEL 1;
+COMP "TMDSp<0>" LOCATE = SITE "C13" LEVEL 1;
+COMP "TMDSp<1>" LOCATE = SITE "B12" LEVEL 1;
+COMP "TMDSp<2>" LOCATE = SITE "C11" LEVEL 1;
+COMP "CLK" LOCATE = SITE "J4" LEVEL 1;
+COMP "CAM_DATA<0>" LOCATE = SITE "E7" LEVEL 1;
+COMP "CAM_DATA<1>" LOCATE = SITE "C8" LEVEL 1;
+COMP "CAM_DATA<2>" LOCATE = SITE "D8" LEVEL 1;
+COMP "CAM_DATA<3>" LOCATE = SITE "E8" LEVEL 1;
+COMP "CAM_DATA<4>" LOCATE = SITE "D9" LEVEL 1;
+COMP "CAM_DATA<5>" LOCATE = SITE "A10" LEVEL 1;
+COMP "CAM_DATA<6>" LOCATE = SITE "B10" LEVEL 1;
+COMP "CAM_DATA<7>" LOCATE = SITE "C10" LEVEL 1;
+COMP "LED<0>" LOCATE = SITE "P11" LEVEL 1;
+COMP "LED<1>" LOCATE = SITE "N9" LEVEL 1;
+COMP "LED<2>" LOCATE = SITE "M9" LEVEL 1;
+COMP "LED<3>" LOCATE = SITE "P9" LEVEL 1;
+COMP "LED<4>" LOCATE = SITE "T8" LEVEL 1;
+COMP "LED<5>" LOCATE = SITE "N8" LEVEL 1;
+COMP "LED<6>" LOCATE = SITE "P8" LEVEL 1;
+COMP "LED<7>" LOCATE = SITE "P7" LEVEL 1;
+COMP "RESETN" LOCATE = SITE "E11" LEVEL 1;
+COMP "CAM_RESET" LOCATE = SITE "D14" LEVEL 1;
+COMP "CAM_VSYNC" LOCATE = SITE "E13" LEVEL 1;
+COMP "TMDSn_clock" LOCATE = SITE "A14" LEVEL 1;
+COMP "TMDSp_clock" LOCATE = SITE "B14" LEVEL 1;
+COMP "CAM_HREF" LOCATE = SITE "E12" LEVEL 1;
+COMP "CAM_PCLK" LOCATE = SITE "E10" LEVEL 1;
+COMP "CAM_SIOC" LOCATE = SITE "F13" LEVEL 1;
+COMP "CAM_SIOD" LOCATE = SITE "F12" LEVEL 1;
+COMP "CAM_XCLK" LOCATE = SITE "D12" LEVEL 1;
+TIMEGRP TS11 = BEL "camera0/pixel_counter/Qp_0" BEL
+        "camera0/pixel_counter/Qp_1" BEL "camera0/y_latch/Qp_0" BEL
+        "camera0/y_latch/Qp_1" BEL "camera0/y_latch/Qp_2" BEL
+        "camera0/y_latch/Qp_3" BEL "camera0/y_latch/Qp_4" BEL
+        "camera0/y_latch/Qp_5" BEL "camera0/y_latch/Qp_6" BEL
+        "camera0/y_latch/Qp_7" BEL "camera0/u_latch/Qp_0" BEL
+        "camera0/u_latch/Qp_1" BEL "camera0/u_latch/Qp_2" BEL
+        "camera0/u_latch/Qp_3" BEL "camera0/u_latch/Qp_4" BEL
+        "camera0/u_latch/Qp_5" BEL "camera0/u_latch/Qp_6" BEL
+        "camera0/u_latch/Qp_7" BEL "camera0/v_latch/Qp_0" BEL
+        "camera0/v_latch/Qp_1" BEL "camera0/v_latch/Qp_2" BEL
+        "camera0/v_latch/Qp_3" BEL "camera0/v_latch/Qp_4" BEL
+        "camera0/v_latch/Qp_5" BEL "camera0/v_latch/Qp_6" BEL
+        "camera0/v_latch/Qp_7" BEL "camera0/vsync_old" BEL "camera0/hsynct"
+        BEL "camera0/vsynct" BEL "yuv_rgb0/DE_out" BEL "CAM_PCLK_BUFGP/BUFG";
+NET "clk0" PERIOD = 31.25 ns HIGH 50%;
+NET "CAM_XCLK" PERIOD = 41.6 ns HIGH 50%;
+TIMEGRP "PADS" = PADS(*);
+TIMEGRP "FFS" = FFS(*);
+TS11 = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP "FFS" 30 ns;
+TS12 = MAXDELAY FROM TIMEGRP "FFS" TO TIMEGRP "PADS" 10 ns;
+SCHEMATIC END;
+

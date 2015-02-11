@@ -1,0 +1,1716 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml miniOV7670.twx miniOV7670.ncd -o miniOV7670.twr
+miniOV7670.pcf
+
+Design file:              miniOV7670.ncd
+Physical constraint file: miniOV7670.pcf
+Device,package,speed:     xc6slx25,ftg256,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: NET "clk0" PERIOD = 31.25 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1488 paths analyzed, 126 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  16.000ns.
+--------------------------------------------------------------------------------
+
+Paths for end point reset0/counter0_1 (SLICE_X42Y47.SR), 31 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     27.141ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/counter0_4 (FF)
+  Destination:          reset0/counter0_1 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.068ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.006ns (0.482 - 0.488)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset0/counter0_4 to reset0/counter0_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.BQ      Tcko                  0.391   reset0/counter0<4>
+                                                       reset0/counter0_4
+    SLICE_X43Y47.A1      net (fanout=2)        1.012   reset0/counter0<4>
+    SLICE_X43Y47.A       Tilo                  0.259   reset0/resetn_0_t<30>2
+                                                       reset0/resetn_0_t<30>3
+    SLICE_X43Y54.A6      net (fanout=1)        0.688   reset0/resetn_0_t<30>2
+    SLICE_X43Y54.A       Tilo                  0.259   reset0/counter0<4>
+                                                       reset0/resetn_0_t<30>6
+    SLICE_X42Y47.SR      net (fanout=11)       1.017   reset0/resetn_0_t
+    SLICE_X42Y47.CLK     Tsrck                 0.442   reset0/counter0<3>
+                                                       reset0/counter0_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.068ns (1.351ns logic, 2.717ns route)
+                                                       (33.2% logic, 66.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.158ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/counter0_11 (FF)
+  Destination:          reset0/counter0_1 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.041ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.016ns (0.482 - 0.498)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset0/counter0_11 to reset0/counter0_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y49.DQ      Tcko                  0.447   reset0/counter0<11>
+                                                       reset0/counter0_11
+    SLICE_X43Y50.C2      net (fanout=2)        0.965   reset0/counter0<11>
+    SLICE_X43Y50.C       Tilo                  0.259   reset0/counter0<14>
+                                                       reset0/resetn_0_t<30>4
+    SLICE_X43Y54.A4      net (fanout=1)        0.652   reset0/resetn_0_t<30>3
+    SLICE_X43Y54.A       Tilo                  0.259   reset0/counter0<4>
+                                                       reset0/resetn_0_t<30>6
+    SLICE_X42Y47.SR      net (fanout=11)       1.017   reset0/resetn_0_t
+    SLICE_X42Y47.CLK     Tsrck                 0.442   reset0/counter0<3>
+                                                       reset0/counter0_1
+    -------------------------------------------------  ---------------------------
+    Total                                      4.041ns (1.407ns logic, 2.634ns route)
+                                                       (34.8% logic, 65.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.311ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/counter0_6 (FF)
+  Destination:          reset0/counter0_1 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.898ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.006ns (0.482 - 0.488)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset0/counter0_6 to reset0/counter0_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.BMUX    Tshcko                0.461   reset0/counter0<4>
+                                                       reset0/counter0_6
+    SLICE_X43Y50.C1      net (fanout=2)        0.808   reset0/counter0<6>
+    SLICE_X43Y50.C       Tilo                  0.259   reset0/counter0<14>
+                                                       reset0/resetn_0_t<30>4
+    SLICE_X43Y54.A4      net (fanout=1)        0.652   reset0/resetn_0_t<30>3
+    SLICE_X43Y54.A       Tilo                  0.259   reset0/counter0<4>
+                                                       reset0/resetn_0_t<30>6
+    SLICE_X42Y47.SR      net (fanout=11)       1.017   reset0/resetn_0_t
+    SLICE_X42Y47.CLK     Tsrck                 0.442   reset0/counter0<3>
+                                                       reset0/counter0_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.898ns (1.421ns logic, 2.477ns route)
+                                                       (36.5% logic, 63.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point reset0/counter0_3 (SLICE_X42Y47.SR), 31 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     27.144ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/counter0_4 (FF)
+  Destination:          reset0/counter0_3 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.065ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.006ns (0.482 - 0.488)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset0/counter0_4 to reset0/counter0_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.BQ      Tcko                  0.391   reset0/counter0<4>
+                                                       reset0/counter0_4
+    SLICE_X43Y47.A1      net (fanout=2)        1.012   reset0/counter0<4>
+    SLICE_X43Y47.A       Tilo                  0.259   reset0/resetn_0_t<30>2
+                                                       reset0/resetn_0_t<30>3
+    SLICE_X43Y54.A6      net (fanout=1)        0.688   reset0/resetn_0_t<30>2
+    SLICE_X43Y54.A       Tilo                  0.259   reset0/counter0<4>
+                                                       reset0/resetn_0_t<30>6
+    SLICE_X42Y47.SR      net (fanout=11)       1.017   reset0/resetn_0_t
+    SLICE_X42Y47.CLK     Tsrck                 0.439   reset0/counter0<3>
+                                                       reset0/counter0_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.065ns (1.348ns logic, 2.717ns route)
+                                                       (33.2% logic, 66.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.161ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/counter0_11 (FF)
+  Destination:          reset0/counter0_3 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.038ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.016ns (0.482 - 0.498)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset0/counter0_11 to reset0/counter0_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y49.DQ      Tcko                  0.447   reset0/counter0<11>
+                                                       reset0/counter0_11
+    SLICE_X43Y50.C2      net (fanout=2)        0.965   reset0/counter0<11>
+    SLICE_X43Y50.C       Tilo                  0.259   reset0/counter0<14>
+                                                       reset0/resetn_0_t<30>4
+    SLICE_X43Y54.A4      net (fanout=1)        0.652   reset0/resetn_0_t<30>3
+    SLICE_X43Y54.A       Tilo                  0.259   reset0/counter0<4>
+                                                       reset0/resetn_0_t<30>6
+    SLICE_X42Y47.SR      net (fanout=11)       1.017   reset0/resetn_0_t
+    SLICE_X42Y47.CLK     Tsrck                 0.439   reset0/counter0<3>
+                                                       reset0/counter0_3
+    -------------------------------------------------  ---------------------------
+    Total                                      4.038ns (1.404ns logic, 2.634ns route)
+                                                       (34.8% logic, 65.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.314ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/counter0_6 (FF)
+  Destination:          reset0/counter0_3 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.895ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.006ns (0.482 - 0.488)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset0/counter0_6 to reset0/counter0_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.BMUX    Tshcko                0.461   reset0/counter0<4>
+                                                       reset0/counter0_6
+    SLICE_X43Y50.C1      net (fanout=2)        0.808   reset0/counter0<6>
+    SLICE_X43Y50.C       Tilo                  0.259   reset0/counter0<14>
+                                                       reset0/resetn_0_t<30>4
+    SLICE_X43Y54.A4      net (fanout=1)        0.652   reset0/resetn_0_t<30>3
+    SLICE_X43Y54.A       Tilo                  0.259   reset0/counter0<4>
+                                                       reset0/resetn_0_t<30>6
+    SLICE_X42Y47.SR      net (fanout=11)       1.017   reset0/resetn_0_t
+    SLICE_X42Y47.CLK     Tsrck                 0.439   reset0/counter0<3>
+                                                       reset0/counter0_3
+    -------------------------------------------------  ---------------------------
+    Total                                      3.895ns (1.418ns logic, 2.477ns route)
+                                                       (36.4% logic, 63.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point reset0/counter0_2 (SLICE_X42Y47.SR), 31 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     27.152ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/counter0_4 (FF)
+  Destination:          reset0/counter0_2 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.057ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.006ns (0.482 - 0.488)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset0/counter0_4 to reset0/counter0_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.BQ      Tcko                  0.391   reset0/counter0<4>
+                                                       reset0/counter0_4
+    SLICE_X43Y47.A1      net (fanout=2)        1.012   reset0/counter0<4>
+    SLICE_X43Y47.A       Tilo                  0.259   reset0/resetn_0_t<30>2
+                                                       reset0/resetn_0_t<30>3
+    SLICE_X43Y54.A6      net (fanout=1)        0.688   reset0/resetn_0_t<30>2
+    SLICE_X43Y54.A       Tilo                  0.259   reset0/counter0<4>
+                                                       reset0/resetn_0_t<30>6
+    SLICE_X42Y47.SR      net (fanout=11)       1.017   reset0/resetn_0_t
+    SLICE_X42Y47.CLK     Tsrck                 0.431   reset0/counter0<3>
+                                                       reset0/counter0_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.057ns (1.340ns logic, 2.717ns route)
+                                                       (33.0% logic, 67.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.169ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/counter0_11 (FF)
+  Destination:          reset0/counter0_2 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      4.030ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.016ns (0.482 - 0.498)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset0/counter0_11 to reset0/counter0_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y49.DQ      Tcko                  0.447   reset0/counter0<11>
+                                                       reset0/counter0_11
+    SLICE_X43Y50.C2      net (fanout=2)        0.965   reset0/counter0<11>
+    SLICE_X43Y50.C       Tilo                  0.259   reset0/counter0<14>
+                                                       reset0/resetn_0_t<30>4
+    SLICE_X43Y54.A4      net (fanout=1)        0.652   reset0/resetn_0_t<30>3
+    SLICE_X43Y54.A       Tilo                  0.259   reset0/counter0<4>
+                                                       reset0/resetn_0_t<30>6
+    SLICE_X42Y47.SR      net (fanout=11)       1.017   reset0/resetn_0_t
+    SLICE_X42Y47.CLK     Tsrck                 0.431   reset0/counter0<3>
+                                                       reset0/counter0_2
+    -------------------------------------------------  ---------------------------
+    Total                                      4.030ns (1.396ns logic, 2.634ns route)
+                                                       (34.6% logic, 65.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     27.322ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/counter0_6 (FF)
+  Destination:          reset0/counter0_2 (FF)
+  Requirement:          31.250ns
+  Data Path Delay:      3.887ns (Levels of Logic = 2)
+  Clock Path Skew:      -0.006ns (0.482 - 0.488)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset0/counter0_6 to reset0/counter0_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.BMUX    Tshcko                0.461   reset0/counter0<4>
+                                                       reset0/counter0_6
+    SLICE_X43Y50.C1      net (fanout=2)        0.808   reset0/counter0<6>
+    SLICE_X43Y50.C       Tilo                  0.259   reset0/counter0<14>
+                                                       reset0/resetn_0_t<30>4
+    SLICE_X43Y54.A4      net (fanout=1)        0.652   reset0/resetn_0_t<30>3
+    SLICE_X43Y54.A       Tilo                  0.259   reset0/counter0<4>
+                                                       reset0/resetn_0_t<30>6
+    SLICE_X42Y47.SR      net (fanout=11)       1.017   reset0/resetn_0_t
+    SLICE_X42Y47.CLK     Tsrck                 0.431   reset0/counter0<3>
+                                                       reset0/counter0_2
+    -------------------------------------------------  ---------------------------
+    Total                                      3.887ns (1.410ns logic, 2.477ns route)
+                                                       (36.3% logic, 63.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: NET "clk0" PERIOD = 31.25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point reset0/counter0_13 (SLICE_X42Y50.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.534ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               reset0/counter0_13 (FF)
+  Destination:          reset0/counter0_13 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.534ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk0_BUFG rising at 31.250ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: reset0/counter0_13 to reset0/counter0_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y50.BQ      Tcko                  0.234   reset0/counter0<13>
+                                                       reset0/counter0_13
+    SLICE_X42Y50.B5      net (fanout=2)        0.063   reset0/counter0<13>
+    SLICE_X42Y50.CLK     Tah         (-Th)    -0.237   reset0/counter0<13>
+                                                       reset0/Mcount_counter0_lut<13>_INV_0
+                                                       reset0/Mcount_counter0_cy<15>
+                                                       reset0/counter0_13
+    -------------------------------------------------  ---------------------------
+    Total                                      0.534ns (0.471ns logic, 0.063ns route)
+                                                       (88.2% logic, 11.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point reset0/counter0_29 (SLICE_X42Y54.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.534ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               reset0/counter0_29 (FF)
+  Destination:          reset0/counter0_29 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.534ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk0_BUFG rising at 31.250ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: reset0/counter0_29 to reset0/counter0_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y54.BQ      Tcko                  0.234   reset0/counter0<30>
+                                                       reset0/counter0_29
+    SLICE_X42Y54.B5      net (fanout=2)        0.063   reset0/counter0<29>
+    SLICE_X42Y54.CLK     Tah         (-Th)    -0.237   reset0/counter0<30>
+                                                       reset0/Mcount_counter0_lut<29>_INV_0
+                                                       reset0/Mcount_counter0_xor<30>
+                                                       reset0/counter0_29
+    -------------------------------------------------  ---------------------------
+    Total                                      0.534ns (0.471ns logic, 0.063ns route)
+                                                       (88.2% logic, 11.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point reset0/counter0_1 (SLICE_X42Y47.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.535ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               reset0/counter0_1 (FF)
+  Destination:          reset0/counter0_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.535ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk0_BUFG rising at 31.250ns
+  Destination Clock:    clk0_BUFG rising at 31.250ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: reset0/counter0_1 to reset0/counter0_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X42Y47.BQ      Tcko                  0.234   reset0/counter0<3>
+                                                       reset0/counter0_1
+    SLICE_X42Y47.B5      net (fanout=2)        0.064   reset0/counter0<1>
+    SLICE_X42Y47.CLK     Tah         (-Th)    -0.237   reset0/counter0<3>
+                                                       reset0/Mcount_counter0_lut<1>_INV_0
+                                                       reset0/Mcount_counter0_cy<3>
+                                                       reset0/counter0_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.535ns (0.471ns logic, 0.064ns route)
+                                                       (88.0% logic, 12.0% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: NET "clk0" PERIOD = 31.25 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 15.250ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 31.250ns
+  Low pulse: 15.625ns
+  Low pulse limit: 8.000ns (Tdcmpw_CLKIN_25_50)
+  Physical resource: Inst_dcm96/DCM_SP_INST/CLKIN
+  Logical resource: Inst_dcm96/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: Inst_dcm96/DCM_SP_INST_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 15.250ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 31.250ns
+  High pulse: 15.625ns
+  High pulse limit: 8.000ns (Tdcmpw_CLKIN_25_50)
+  Physical resource: Inst_dcm96/DCM_SP_INST/CLKIN
+  Logical resource: Inst_dcm96/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: Inst_dcm96/DCM_SP_INST_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+Slack: 27.680ns (period - min period limit)
+  Period: 31.250ns
+  Min period limit: 3.570ns (280.112MHz) (Tdcmper_CLKIN)
+  Physical resource: Inst_dcm96/DCM_SP_INST/CLKIN
+  Logical resource: Inst_dcm96/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y1.CLKIN
+  Clock network: Inst_dcm96/DCM_SP_INST_ML_NEW_DIVCLK
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "Inst_dcm96/CLKFX_BUF" derived from  
+NET "clk0" PERIOD = 31.25 ns HIGH 50%;  divided by 3.00 to 10.417 nS and duty 
+cycle corrected to HIGH 5.208 nS  
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 90 paths analyzed, 66 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   8.000ns.
+--------------------------------------------------------------------------------
+
+Paths for end point yuv_rgb0/pixel_r_latch0/Qp_5 (SLICE_X29Y68.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     4.189ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/resetn_0 (FF)
+  Destination:          yuv_rgb0/pixel_r_latch0/Qp_5 (FF)
+  Requirement:          10.416ns
+  Data Path Delay:      3.467ns (Levels of Logic = 1)
+  Clock Path Skew:      -2.370ns (-0.464 - 1.906)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk_96 rising at 10.416ns
+  Clock Uncertainty:    0.390ns
+
+  Clock Uncertainty:          0.390ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.408ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: reset0/resetn_0 to yuv_rgb0/pixel_r_latch0/Qp_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.AQ      Tcko                  0.391   reset0/counter0<4>
+                                                       reset0/resetn_0
+    SLICE_X39Y63.A6      net (fanout=10)       0.965   reset0/resetn_0
+    SLICE_X39Y63.A       Tilo                  0.259   camera0/pixel_counter/resetn_inv
+                                                       camera_conf_block/i2c_master0/resetn_inv1_INV_0
+    SLICE_X29Y68.SR      net (fanout=37)       1.539   camera0/pixel_counter/resetn_inv
+    SLICE_X29Y68.CLK     Trck                  0.313   yuv_rgb0/pixel_r_latch0/Qp<5>
+                                                       yuv_rgb0/pixel_r_latch0/Qp_5
+    -------------------------------------------------  ---------------------------
+    Total                                      3.467ns (0.963ns logic, 2.504ns route)
+                                                       (27.8% logic, 72.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point yuv_rgb0/pixel_r_latch0/Qp_4 (SLICE_X29Y68.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     4.235ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/resetn_0 (FF)
+  Destination:          yuv_rgb0/pixel_r_latch0/Qp_4 (FF)
+  Requirement:          10.416ns
+  Data Path Delay:      3.421ns (Levels of Logic = 1)
+  Clock Path Skew:      -2.370ns (-0.464 - 1.906)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk_96 rising at 10.416ns
+  Clock Uncertainty:    0.390ns
+
+  Clock Uncertainty:          0.390ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.408ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: reset0/resetn_0 to yuv_rgb0/pixel_r_latch0/Qp_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.AQ      Tcko                  0.391   reset0/counter0<4>
+                                                       reset0/resetn_0
+    SLICE_X39Y63.A6      net (fanout=10)       0.965   reset0/resetn_0
+    SLICE_X39Y63.A       Tilo                  0.259   camera0/pixel_counter/resetn_inv
+                                                       camera_conf_block/i2c_master0/resetn_inv1_INV_0
+    SLICE_X29Y68.SR      net (fanout=37)       1.539   camera0/pixel_counter/resetn_inv
+    SLICE_X29Y68.CLK     Trck                  0.267   yuv_rgb0/pixel_r_latch0/Qp<5>
+                                                       yuv_rgb0/pixel_r_latch0/Qp_4
+    -------------------------------------------------  ---------------------------
+    Total                                      3.421ns (0.917ns logic, 2.504ns route)
+                                                       (26.8% logic, 73.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point yuv_rgb0/pixel_r_latch0/Qp_1 (SLICE_X29Y67.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     4.376ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/resetn_0 (FF)
+  Destination:          yuv_rgb0/pixel_r_latch0/Qp_1 (FF)
+  Requirement:          10.416ns
+  Data Path Delay:      3.282ns (Levels of Logic = 1)
+  Clock Path Skew:      -2.368ns (-0.462 - 1.906)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+  Destination Clock:    clk_96 rising at 10.416ns
+  Clock Uncertainty:    0.390ns
+
+  Clock Uncertainty:          0.390ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.408ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: reset0/resetn_0 to yuv_rgb0/pixel_r_latch0/Qp_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.AQ      Tcko                  0.391   reset0/counter0<4>
+                                                       reset0/resetn_0
+    SLICE_X39Y63.A6      net (fanout=10)       0.965   reset0/resetn_0
+    SLICE_X39Y63.A       Tilo                  0.259   camera0/pixel_counter/resetn_inv
+                                                       camera_conf_block/i2c_master0/resetn_inv1_INV_0
+    SLICE_X29Y67.SR      net (fanout=37)       1.378   camera0/pixel_counter/resetn_inv
+    SLICE_X29Y67.CLK     Trck                  0.289   yuv_rgb0/pixel_r_latch0/Qp<1>
+                                                       yuv_rgb0/pixel_r_latch0/Qp_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.282ns (0.939ns logic, 2.343ns route)
+                                                       (28.6% logic, 71.4% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PERIOD analysis for net "Inst_dcm96/CLKFX_BUF" derived from
+ NET "clk0" PERIOD = 31.25 ns HIGH 50%;
+ divided by 3.00 to 10.417 nS and duty cycle corrected to HIGH 5.208 nS 
+
+--------------------------------------------------------------------------------
+
+Paths for end point conf_rom/Mram_rom (RAMB8_X2Y27.ADDRAWRADDR9), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.163ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               camera_conf_block/reg_addr_temp_5 (FF)
+  Destination:          conf_rom/Mram_rom (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.911ns (Levels of Logic = 0)
+  Clock Path Skew:      0.084ns (0.629 - 0.545)
+  Source Clock:         clk_24 rising at 0.000ns
+  Destination Clock:    clk_96 rising at 0.000ns
+  Clock Uncertainty:    0.664ns
+
+  Clock Uncertainty:          0.664ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.408ns
+    Phase Error (PE):           0.424ns
+
+  Minimum Data Path at Fast Process Corner: camera_conf_block/reg_addr_temp_5 to conf_rom/Mram_rom
+    Location                 Delay type         Delay(ns)  Physical Resource
+                                                           Logical Resource(s)
+    -----------------------------------------------------  -------------------
+    SLICE_X44Y51.BQ          Tcko                  0.200   camera_conf_block/reg_addr_temp<7>
+                                                           camera_conf_block/reg_addr_temp_5
+    RAMB8_X2Y27.ADDRAWRADDR9 net (fanout=3)        0.777   camera_conf_block/reg_addr_temp<5>
+    RAMB8_X2Y27.CLKAWRCLK    Trckc_ADDRA (-Th)     0.066   conf_rom/Mram_rom
+                                                           conf_rom/Mram_rom
+    -----------------------------------------------------  ---------------------------
+    Total                                          0.911ns (0.134ns logic, 0.777ns route)
+                                                           (14.7% logic, 85.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point conf_rom/Mram_rom (RAMB8_X2Y27.ADDRAWRADDR10), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.284ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               camera_conf_block/reg_addr_temp_6 (FF)
+  Destination:          conf_rom/Mram_rom (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      1.032ns (Levels of Logic = 0)
+  Clock Path Skew:      0.084ns (0.629 - 0.545)
+  Source Clock:         clk_24 rising at 0.000ns
+  Destination Clock:    clk_96 rising at 0.000ns
+  Clock Uncertainty:    0.664ns
+
+  Clock Uncertainty:          0.664ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.408ns
+    Phase Error (PE):           0.424ns
+
+  Minimum Data Path at Fast Process Corner: camera_conf_block/reg_addr_temp_6 to conf_rom/Mram_rom
+    Location                  Delay type         Delay(ns)  Physical Resource
+                                                            Logical Resource(s)
+    ------------------------------------------------------  -------------------
+    SLICE_X44Y51.CQ           Tcko                  0.200   camera_conf_block/reg_addr_temp<7>
+                                                            camera_conf_block/reg_addr_temp_6
+    RAMB8_X2Y27.ADDRAWRADDR10 net (fanout=3)        0.898   camera_conf_block/reg_addr_temp<6>
+    RAMB8_X2Y27.CLKAWRCLK     Trckc_ADDRA (-Th)     0.066   conf_rom/Mram_rom
+                                                            conf_rom/Mram_rom
+    ------------------------------------------------------  ---------------------------
+    Total                                           1.032ns (0.134ns logic, 0.898ns route)
+                                                            (13.0% logic, 87.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point conf_rom/Mram_rom (RAMB8_X2Y27.ADDRAWRADDR8), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.325ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               camera_conf_block/reg_addr_temp_4 (FF)
+  Destination:          conf_rom/Mram_rom (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      1.073ns (Levels of Logic = 0)
+  Clock Path Skew:      0.084ns (0.629 - 0.545)
+  Source Clock:         clk_24 rising at 0.000ns
+  Destination Clock:    clk_96 rising at 0.000ns
+  Clock Uncertainty:    0.664ns
+
+  Clock Uncertainty:          0.664ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.408ns
+    Phase Error (PE):           0.424ns
+
+  Minimum Data Path at Fast Process Corner: camera_conf_block/reg_addr_temp_4 to conf_rom/Mram_rom
+    Location                 Delay type         Delay(ns)  Physical Resource
+                                                           Logical Resource(s)
+    -----------------------------------------------------  -------------------
+    SLICE_X44Y51.AQ          Tcko                  0.200   camera_conf_block/reg_addr_temp<7>
+                                                           camera_conf_block/reg_addr_temp_4
+    RAMB8_X2Y27.ADDRAWRADDR8 net (fanout=3)        0.939   camera_conf_block/reg_addr_temp<4>
+    RAMB8_X2Y27.CLKAWRCLK    Trckc_ADDRA (-Th)     0.066   conf_rom/Mram_rom
+                                                           conf_rom/Mram_rom
+    -----------------------------------------------------  ---------------------------
+    Total                                          1.073ns (0.134ns logic, 0.939ns route)
+                                                           (12.5% logic, 87.5% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "Inst_dcm96/CLKFX_BUF" derived from
+ NET "clk0" PERIOD = 31.25 ns HIGH 50%;
+ divided by 3.00 to 10.417 nS and duty cycle corrected to HIGH 5.208 nS 
+
+--------------------------------------------------------------------------------
+Slack: 2.416ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.416ns
+  Low pulse: 5.208ns
+  Low pulse limit: 4.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: Inst_dcm24/DCM_SP_INST/CLKIN
+  Logical resource: Inst_dcm24/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y2.CLKIN
+  Clock network: clk_96
+--------------------------------------------------------------------------------
+Slack: 2.416ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.416ns
+  High pulse: 5.208ns
+  High pulse limit: 4.000ns (Tdcmpw_CLKIN_50_100)
+  Physical resource: Inst_dcm24/DCM_SP_INST/CLKIN
+  Logical resource: Inst_dcm24/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y2.CLKIN
+  Clock network: clk_96
+--------------------------------------------------------------------------------
+Slack: 6.846ns (period - min period limit)
+  Period: 10.416ns
+  Min period limit: 3.570ns (280.112MHz) (Tdcmper_CLKIN)
+  Physical resource: Inst_dcm24/DCM_SP_INST/CLKIN
+  Logical resource: Inst_dcm24/DCM_SP_INST/CLKIN
+  Location pin: DCM_X0Y2.CLKIN
+  Clock network: clk_96
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: PERIOD analysis for net "Inst_dcm24/CLKDV_BUF" derived from  
+PERIOD analysis for net "Inst_dcm96/CLKFX_BUF" derived from NET "clk0" PERIOD = 
+31.25 ns HIGH 50%; divided by 3.00 to 10.417 nS and duty cycle corrected to 
+HIGH 5.208 nS   multiplied by 4.00 to 41.667 nS and duty cycle corrected to 
+HIGH 20.833 nS  
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 2500 paths analyzed, 311 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is  26.021ns.
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/reg_addr_temp_1 (SLICE_X44Y50.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.911ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/resetn_0 (FF)
+  Destination:          camera_conf_block/reg_addr_temp_1 (FF)
+  Requirement:          10.416ns
+  Data Path Delay:      3.797ns (Levels of Logic = 1)
+  Clock Path Skew:      -2.318ns (-0.412 - 1.906)
+  Source Clock:         clk0_BUFG rising at 31.250ns
+  Destination Clock:    clk_24 rising at 41.666ns
+  Clock Uncertainty:    0.390ns
+
+  Clock Uncertainty:          0.390ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.408ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: reset0/resetn_0 to camera_conf_block/reg_addr_temp_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.AQ      Tcko                  0.391   reset0/counter0<4>
+                                                       reset0/resetn_0
+    SLICE_X39Y63.A6      net (fanout=10)       0.965   reset0/resetn_0
+    SLICE_X39Y63.A       Tilo                  0.259   camera0/pixel_counter/resetn_inv
+                                                       camera_conf_block/i2c_master0/resetn_inv1_INV_0
+    SLICE_X44Y50.SR      net (fanout=37)       1.939   camera0/pixel_counter/resetn_inv
+    SLICE_X44Y50.CLK     Trck                  0.243   camera_conf_block/reg_addr_temp<3>
+                                                       camera_conf_block/reg_addr_temp_1
+    -------------------------------------------------  ---------------------------
+    Total                                      3.797ns (0.893ns logic, 2.904ns route)
+                                                       (23.5% logic, 76.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/i2c_data_0 (SLICE_X49Y55.A1), 2 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.920ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/resetn_0 (FF)
+  Destination:          camera_conf_block/i2c_data_0 (FF)
+  Requirement:          10.416ns
+  Data Path Delay:      3.805ns (Levels of Logic = 2)
+  Clock Path Skew:      -2.301ns (-0.395 - 1.906)
+  Source Clock:         clk0_BUFG rising at 31.250ns
+  Destination Clock:    clk_24 rising at 41.666ns
+  Clock Uncertainty:    0.390ns
+
+  Clock Uncertainty:          0.390ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.408ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: reset0/resetn_0 to camera_conf_block/i2c_data_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.AQ      Tcko                  0.391   reset0/counter0<4>
+                                                       reset0/resetn_0
+    SLICE_X39Y64.C3      net (fanout=10)       1.163   reset0/resetn_0
+    SLICE_X39Y64.CMUX    Tilo                  0.313   HDMI_Encoder0/encode_B/TMDS<8>
+                                                       camera_conf_block/_n0110_inv1_rstpot
+    SLICE_X49Y55.A1      net (fanout=8)        1.616   camera_conf_block/_n0110_inv1_rstpot
+    SLICE_X49Y55.CLK     Tas                   0.322   camera_conf_block/i2c_data<3>
+                                                       camera_conf_block/i2c_data_0_dpot
+                                                       camera_conf_block/i2c_data_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.805ns (1.026ns logic, 2.779ns route)
+                                                       (27.0% logic, 73.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     37.689ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               camera_conf_block/reg_state_FSM_FFd2 (FF)
+  Destination:          camera_conf_block/i2c_data_0 (FF)
+  Requirement:          41.666ns
+  Data Path Delay:      3.746ns (Levels of Logic = 2)
+  Clock Path Skew:      0.009ns (0.323 - 0.314)
+  Source Clock:         clk_24 rising at 0.000ns
+  Destination Clock:    clk_24 rising at 41.666ns
+  Clock Uncertainty:    0.240ns
+
+  Clock Uncertainty:          0.240ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.408ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: camera_conf_block/reg_state_FSM_FFd2 to camera_conf_block/i2c_data_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y53.CQ      Tcko                  0.408   camera_conf_block/reg_state_FSM_FFd2
+                                                       camera_conf_block/reg_state_FSM_FFd2
+    SLICE_X39Y64.C5      net (fanout=9)        1.087   camera_conf_block/reg_state_FSM_FFd2
+    SLICE_X39Y64.CMUX    Tilo                  0.313   HDMI_Encoder0/encode_B/TMDS<8>
+                                                       camera_conf_block/_n0110_inv1_rstpot
+    SLICE_X49Y55.A1      net (fanout=8)        1.616   camera_conf_block/_n0110_inv1_rstpot
+    SLICE_X49Y55.CLK     Tas                   0.322   camera_conf_block/i2c_data<3>
+                                                       camera_conf_block/i2c_data_0_dpot
+                                                       camera_conf_block/i2c_data_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.746ns (1.043ns logic, 2.703ns route)
+                                                       (27.8% logic, 72.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/reg_addr_temp_0 (SLICE_X44Y50.SR), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.922ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               reset0/resetn_0 (FF)
+  Destination:          camera_conf_block/reg_addr_temp_0 (FF)
+  Requirement:          10.416ns
+  Data Path Delay:      3.786ns (Levels of Logic = 1)
+  Clock Path Skew:      -2.318ns (-0.412 - 1.906)
+  Source Clock:         clk0_BUFG rising at 31.250ns
+  Destination Clock:    clk_24 rising at 41.666ns
+  Clock Uncertainty:    0.390ns
+
+  Clock Uncertainty:          0.390ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.408ns
+    Phase Error (PE):           0.150ns
+
+  Maximum Data Path at Slow Process Corner: reset0/resetn_0 to camera_conf_block/reg_addr_temp_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.AQ      Tcko                  0.391   reset0/counter0<4>
+                                                       reset0/resetn_0
+    SLICE_X39Y63.A6      net (fanout=10)       0.965   reset0/resetn_0
+    SLICE_X39Y63.A       Tilo                  0.259   camera0/pixel_counter/resetn_inv
+                                                       camera_conf_block/i2c_master0/resetn_inv1_INV_0
+    SLICE_X44Y50.SR      net (fanout=37)       1.939   camera0/pixel_counter/resetn_inv
+    SLICE_X44Y50.CLK     Trck                  0.232   camera_conf_block/reg_addr_temp<3>
+                                                       camera_conf_block/reg_addr_temp_0
+    -------------------------------------------------  ---------------------------
+    Total                                      3.786ns (0.882ns logic, 2.904ns route)
+                                                       (23.3% logic, 76.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: PERIOD analysis for net "Inst_dcm24/CLKDV_BUF" derived from
+ PERIOD analysis for net "Inst_dcm96/CLKFX_BUF" derived from NET "clk0" PERIOD = 31.25 ns HIGH 50%; divided by 3.00 to 10.417 nS and duty cycle corrected to HIGH 5.208 nS 
+ multiplied by 4.00 to 41.667 nS and duty cycle corrected to HIGH 20.833 nS 
+
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/reg_state_FSM_FFd1 (SLICE_X44Y52.CX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.409ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               camera_conf_block/reg_state_FSM_FFd1 (FF)
+  Destination:          camera_conf_block/reg_state_FSM_FFd1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.409ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_24 rising at 0.000ns
+  Destination Clock:    clk_24 rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: camera_conf_block/reg_state_FSM_FFd1 to camera_conf_block/reg_state_FSM_FFd1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X44Y52.CQ      Tcko                  0.200   camera_conf_block/reg_state_FSM_FFd1
+                                                       camera_conf_block/reg_state_FSM_FFd1
+    SLICE_X44Y52.CX      net (fanout=15)       0.103   camera_conf_block/reg_state_FSM_FFd1
+    SLICE_X44Y52.CLK     Tckdi       (-Th)    -0.106   camera_conf_block/reg_state_FSM_FFd1
+                                                       camera_conf_block/reg_state_FSM_FFd1-In
+                                                       camera_conf_block/reg_state_FSM_FFd1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.409ns (0.306ns logic, 0.103ns route)
+                                                       (74.8% logic, 25.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/i2c_master0/slave_addr_i_3 (SLICE_X46Y55.B5), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.423ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               camera_conf_block/i2c_master0/slave_addr_i_2 (FF)
+  Destination:          camera_conf_block/i2c_master0/slave_addr_i_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.423ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_24 rising at 0.000ns
+  Destination Clock:    clk_24 rising at 0.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: camera_conf_block/i2c_master0/slave_addr_i_2 to camera_conf_block/i2c_master0/slave_addr_i_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X46Y55.BQ      Tcko                  0.234   camera_conf_block/i2c_master0/slave_addr_i<6>
+                                                       camera_conf_block/i2c_master0/slave_addr_i_2
+    SLICE_X46Y55.B5      net (fanout=1)        0.058   camera_conf_block/i2c_master0/slave_addr_i<2>
+    SLICE_X46Y55.CLK     Tah         (-Th)    -0.131   camera_conf_block/i2c_master0/slave_addr_i<6>
+                                                       camera_conf_block/i2c_master0/Mmux__n037131
+                                                       camera_conf_block/i2c_master0/slave_addr_i_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.423ns (0.365ns logic, 0.058ns route)
+                                                       (86.3% logic, 13.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/i2c_data_6 (SLICE_X49Y54.C6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.428ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               conf_rom/Mram_rom (RAM)
+  Destination:          camera_conf_block/i2c_data_6 (FF)
+  Requirement:          0.001ns
+  Data Path Delay:      0.977ns (Levels of Logic = 1)
+  Clock Path Skew:      0.056ns (0.625 - 0.569)
+  Source Clock:         clk_96 rising at 41.667ns
+  Destination Clock:    clk_24 rising at 41.666ns
+  Clock Uncertainty:    0.494ns
+
+  Clock Uncertainty:          0.494ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.506ns
+    Phase Error (PE):           0.205ns
+
+  Minimum Data Path at Fast Process Corner: conf_rom/Mram_rom to camera_conf_block/i2c_data_6
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB8_X2Y27.DOADO6   Trcko_DOA             0.559   conf_rom/Mram_rom
+                                                       conf_rom/Mram_rom
+    SLICE_X49Y54.C6      net (fanout=2)        0.203   rom_data<6>
+    SLICE_X49Y54.CLK     Tah         (-Th)    -0.215   camera_conf_block/i2c_data<7>
+                                                       camera_conf_block/i2c_data_6_dpot
+                                                       camera_conf_block/i2c_data_6
+    -------------------------------------------------  ---------------------------
+    Total                                      0.977ns (0.774ns logic, 0.203ns route)
+                                                       (79.2% logic, 20.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: PERIOD analysis for net "Inst_dcm24/CLKDV_BUF" derived from
+ PERIOD analysis for net "Inst_dcm96/CLKFX_BUF" derived from NET "clk0" PERIOD = 31.25 ns HIGH 50%; divided by 3.00 to 10.417 nS and duty cycle corrected to HIGH 5.208 nS 
+ multiplied by 4.00 to 41.667 nS and duty cycle corrected to HIGH 20.833 nS 
+
+--------------------------------------------------------------------------------
+Slack: 36.286ns (period - min period limit)
+  Period: 41.666ns
+  Min period limit: 5.380ns (185.874MHz) (Tdcmper_CLKDV)
+  Physical resource: Inst_dcm24/DCM_SP_INST/CLKDV
+  Logical resource: Inst_dcm24/DCM_SP_INST/CLKDV
+  Location pin: DCM_X0Y2.CLKDV
+  Clock network: Inst_dcm24/CLKDV_BUF
+--------------------------------------------------------------------------------
+Slack: 39.936ns (period - min period limit)
+  Period: 41.666ns
+  Min period limit: 1.730ns (578.035MHz) (Tbcper_I)
+  Physical resource: Inst_dcm24/CLKDV_BUFG_INST/I0
+  Logical resource: Inst_dcm24/CLKDV_BUFG_INST/I0
+  Location pin: BUFGMUX_X2Y12.I0
+  Clock network: Inst_dcm24/CLKDV_BUF
+--------------------------------------------------------------------------------
+Slack: 40.027ns (period - min period limit)
+  Period: 41.666ns
+  Min period limit: 1.639ns (610.128MHz) (Tockper)
+  Physical resource: CAM_XCLK_OBUF/CLK0
+  Logical resource: ODDR2_inst/CK0
+  Location pin: OLOGIC_X22Y70.CLK0
+  Clock network: clk_24
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: NET "CAM_XCLK" PERIOD = 41.6 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS11 = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP "FFS" 30 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 282 paths analyzed, 229 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   7.028ns.
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/i2c_master0/tick_count_2 (SLICE_X52Y59.C3), 4 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  22.972ns (requirement - data path)
+  Source:               CAM_SIOC (PAD)
+  Destination:          camera_conf_block/i2c_master0/tick_count_2 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      7.028ns (Levels of Logic = 5)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: CAM_SIOC to camera_conf_block/i2c_master0/tick_count_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F13.I                Tiopi                 1.364   CAM_SIOC
+                                                       CAM_SIOC
+                                                       CAM_SIOC_IOBUF/IBUF
+                                                       ProtoComp55.IMUX
+    SLICE_X49Y58.D5      net (fanout=15)       2.698   N48
+    SLICE_X49Y58.D       Tilo                  0.259   camera_conf_block/i2c_master0/state_FSM_FFd3
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1021
+    SLICE_X50Y58.B3      net (fanout=1)        0.732   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1021
+    SLICE_X50Y58.B       Tilo                  0.203   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.D1      net (fanout=1)        0.482   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.CMUX    Topdc                 0.368   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026_F
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026
+    SLICE_X52Y59.C3      net (fanout=6)        0.581   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT102
+    SLICE_X52Y59.CLK     Tas                   0.341   camera_conf_block/i2c_master0/tick_count<2>
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT63
+                                                       camera_conf_block/i2c_master0/tick_count_2
+    -------------------------------------------------  ---------------------------
+    Total                                      7.028ns (2.535ns logic, 4.493ns route)
+                                                       (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  24.278ns (requirement - data path)
+  Source:               CAM_SIOD (PAD)
+  Destination:          camera_conf_block/i2c_master0/tick_count_2 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      5.722ns (Levels of Logic = 5)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: CAM_SIOD to camera_conf_block/i2c_master0/tick_count_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F12.I                Tiopi                 1.364   CAM_SIOD
+                                                       CAM_SIOD
+                                                       CAM_SIOD_IOBUF/IBUF
+                                                       ProtoComp55.IMUX.1
+    SLICE_X50Y58.A6      net (fanout=11)       2.062   N49
+    SLICE_X50Y58.A       Tilo                  0.203   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1022
+    SLICE_X50Y58.B6      net (fanout=1)        0.118   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1022
+    SLICE_X50Y58.B       Tilo                  0.203   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.D1      net (fanout=1)        0.482   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.CMUX    Topdc                 0.368   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026_F
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026
+    SLICE_X52Y59.C3      net (fanout=6)        0.581   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT102
+    SLICE_X52Y59.CLK     Tas                   0.341   camera_conf_block/i2c_master0/tick_count<2>
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT63
+                                                       camera_conf_block/i2c_master0/tick_count_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.722ns (2.479ns logic, 3.243ns route)
+                                                       (43.3% logic, 56.7% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  24.835ns (requirement - data path)
+  Source:               CAM_SIOC (PAD)
+  Destination:          camera_conf_block/i2c_master0/tick_count_2 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      5.165ns (Levels of Logic = 3)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: CAM_SIOC to camera_conf_block/i2c_master0/tick_count_2
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F13.I                Tiopi                 1.364   CAM_SIOC
+                                                       CAM_SIOC
+                                                       CAM_SIOC_IOBUF/IBUF
+                                                       ProtoComp55.IMUX
+    SLICE_X50Y58.C1      net (fanout=15)       2.518   N48
+    SLICE_X50Y58.CMUX    Tilo                  0.361   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026_G
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026
+    SLICE_X52Y59.C3      net (fanout=6)        0.581   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT102
+    SLICE_X52Y59.CLK     Tas                   0.341   camera_conf_block/i2c_master0/tick_count<2>
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT63
+                                                       camera_conf_block/i2c_master0/tick_count_2
+    -------------------------------------------------  ---------------------------
+    Total                                      5.165ns (2.066ns logic, 3.099ns route)
+                                                       (40.0% logic, 60.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/i2c_master0/tick_count_5 (SLICE_X53Y59.D3), 4 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  22.989ns (requirement - data path)
+  Source:               CAM_SIOC (PAD)
+  Destination:          camera_conf_block/i2c_master0/tick_count_5 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      7.011ns (Levels of Logic = 5)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: CAM_SIOC to camera_conf_block/i2c_master0/tick_count_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F13.I                Tiopi                 1.364   CAM_SIOC
+                                                       CAM_SIOC
+                                                       CAM_SIOC_IOBUF/IBUF
+                                                       ProtoComp55.IMUX
+    SLICE_X49Y58.D5      net (fanout=15)       2.698   N48
+    SLICE_X49Y58.D       Tilo                  0.259   camera_conf_block/i2c_master0/state_FSM_FFd3
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1021
+    SLICE_X50Y58.B3      net (fanout=1)        0.732   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1021
+    SLICE_X50Y58.B       Tilo                  0.203   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.D1      net (fanout=1)        0.482   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.CMUX    Topdc                 0.368   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026_F
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026
+    SLICE_X53Y59.D3      net (fanout=6)        0.583   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT102
+    SLICE_X53Y59.CLK     Tas                   0.322   camera_conf_block/i2c_master0/tick_count<5>
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT12
+                                                       camera_conf_block/i2c_master0/tick_count_5
+    -------------------------------------------------  ---------------------------
+    Total                                      7.011ns (2.516ns logic, 4.495ns route)
+                                                       (35.9% logic, 64.1% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  24.295ns (requirement - data path)
+  Source:               CAM_SIOD (PAD)
+  Destination:          camera_conf_block/i2c_master0/tick_count_5 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      5.705ns (Levels of Logic = 5)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: CAM_SIOD to camera_conf_block/i2c_master0/tick_count_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F12.I                Tiopi                 1.364   CAM_SIOD
+                                                       CAM_SIOD
+                                                       CAM_SIOD_IOBUF/IBUF
+                                                       ProtoComp55.IMUX.1
+    SLICE_X50Y58.A6      net (fanout=11)       2.062   N49
+    SLICE_X50Y58.A       Tilo                  0.203   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1022
+    SLICE_X50Y58.B6      net (fanout=1)        0.118   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1022
+    SLICE_X50Y58.B       Tilo                  0.203   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.D1      net (fanout=1)        0.482   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.CMUX    Topdc                 0.368   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026_F
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026
+    SLICE_X53Y59.D3      net (fanout=6)        0.583   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT102
+    SLICE_X53Y59.CLK     Tas                   0.322   camera_conf_block/i2c_master0/tick_count<5>
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT12
+                                                       camera_conf_block/i2c_master0/tick_count_5
+    -------------------------------------------------  ---------------------------
+    Total                                      5.705ns (2.460ns logic, 3.245ns route)
+                                                       (43.1% logic, 56.9% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  24.852ns (requirement - data path)
+  Source:               CAM_SIOC (PAD)
+  Destination:          camera_conf_block/i2c_master0/tick_count_5 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      5.148ns (Levels of Logic = 3)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: CAM_SIOC to camera_conf_block/i2c_master0/tick_count_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F13.I                Tiopi                 1.364   CAM_SIOC
+                                                       CAM_SIOC
+                                                       CAM_SIOC_IOBUF/IBUF
+                                                       ProtoComp55.IMUX
+    SLICE_X50Y58.C1      net (fanout=15)       2.518   N48
+    SLICE_X50Y58.CMUX    Tilo                  0.361   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026_G
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026
+    SLICE_X53Y59.D3      net (fanout=6)        0.583   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT102
+    SLICE_X53Y59.CLK     Tas                   0.322   camera_conf_block/i2c_master0/tick_count<5>
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT12
+                                                       camera_conf_block/i2c_master0/tick_count_5
+    -------------------------------------------------  ---------------------------
+    Total                                      5.148ns (2.047ns logic, 3.101ns route)
+                                                       (39.8% logic, 60.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/i2c_master0/tick_count_3 (SLICE_X53Y60.A6), 4 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  23.026ns (requirement - data path)
+  Source:               CAM_SIOC (PAD)
+  Destination:          camera_conf_block/i2c_master0/tick_count_3 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      6.974ns (Levels of Logic = 5)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: CAM_SIOC to camera_conf_block/i2c_master0/tick_count_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F13.I                Tiopi                 1.364   CAM_SIOC
+                                                       CAM_SIOC
+                                                       CAM_SIOC_IOBUF/IBUF
+                                                       ProtoComp55.IMUX
+    SLICE_X49Y58.D5      net (fanout=15)       2.698   N48
+    SLICE_X49Y58.D       Tilo                  0.259   camera_conf_block/i2c_master0/state_FSM_FFd3
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1021
+    SLICE_X50Y58.B3      net (fanout=1)        0.732   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1021
+    SLICE_X50Y58.B       Tilo                  0.203   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.D1      net (fanout=1)        0.482   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.CMUX    Topdc                 0.368   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026_F
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026
+    SLICE_X53Y60.A6      net (fanout=6)        0.546   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT102
+    SLICE_X53Y60.CLK     Tas                   0.322   camera_conf_block/i2c_master0/tick_count<3>
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT84
+                                                       camera_conf_block/i2c_master0/tick_count_3
+    -------------------------------------------------  ---------------------------
+    Total                                      6.974ns (2.516ns logic, 4.458ns route)
+                                                       (36.1% logic, 63.9% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  24.332ns (requirement - data path)
+  Source:               CAM_SIOD (PAD)
+  Destination:          camera_conf_block/i2c_master0/tick_count_3 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      5.668ns (Levels of Logic = 5)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: CAM_SIOD to camera_conf_block/i2c_master0/tick_count_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F12.I                Tiopi                 1.364   CAM_SIOD
+                                                       CAM_SIOD
+                                                       CAM_SIOD_IOBUF/IBUF
+                                                       ProtoComp55.IMUX.1
+    SLICE_X50Y58.A6      net (fanout=11)       2.062   N49
+    SLICE_X50Y58.A       Tilo                  0.203   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1022
+    SLICE_X50Y58.B6      net (fanout=1)        0.118   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1022
+    SLICE_X50Y58.B       Tilo                  0.203   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.D1      net (fanout=1)        0.482   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+    SLICE_X50Y58.CMUX    Topdc                 0.368   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026_F
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026
+    SLICE_X53Y60.A6      net (fanout=6)        0.546   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT102
+    SLICE_X53Y60.CLK     Tas                   0.322   camera_conf_block/i2c_master0/tick_count<3>
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT84
+                                                       camera_conf_block/i2c_master0/tick_count_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.668ns (2.460ns logic, 3.208ns route)
+                                                       (43.4% logic, 56.6% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  24.889ns (requirement - data path)
+  Source:               CAM_SIOC (PAD)
+  Destination:          camera_conf_block/i2c_master0/tick_count_3 (FF)
+  Requirement:          30.000ns
+  Data Path Delay:      5.111ns (Levels of Logic = 3)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: CAM_SIOC to camera_conf_block/i2c_master0/tick_count_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F13.I                Tiopi                 1.364   CAM_SIOC
+                                                       CAM_SIOC
+                                                       CAM_SIOC_IOBUF/IBUF
+                                                       ProtoComp55.IMUX
+    SLICE_X50Y58.C1      net (fanout=15)       2.518   N48
+    SLICE_X50Y58.CMUX    Tilo                  0.361   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1023
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026_G
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1026
+    SLICE_X53Y60.A6      net (fanout=6)        0.546   camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT102
+    SLICE_X53Y60.CLK     Tas                   0.322   camera_conf_block/i2c_master0/tick_count<3>
+                                                       camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT84
+                                                       camera_conf_block/i2c_master0/tick_count_3
+    -------------------------------------------------  ---------------------------
+    Total                                      5.111ns (2.047ns logic, 3.064ns route)
+                                                       (40.1% logic, 59.9% route)
+
+--------------------------------------------------------------------------------
+Hold Paths: TS11 = MAXDELAY FROM TIMEGRP "PADS" TO TIMEGRP "FFS" 30 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point camera0/y_latch/Qp_3 (SLICE_X30Y68.DX), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest path):   1.997ns (data path)
+  Source:               CAM_DATA<3> (PAD)
+  Destination:          camera0/y_latch/Qp_3 (FF)
+  Data Path Delay:      1.997ns (Levels of Logic = 1)
+  Destination Clock:    CAM_PCLK_BUFGP rising
+
+  Minimum Data Path at Fast Process Corner: CAM_DATA<3> to camera0/y_latch/Qp_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    E8.I                 Tiopi                 0.589   CAM_DATA<3>
+                                                       CAM_DATA<3>
+                                                       CAM_DATA_3_IBUF
+                                                       ProtoComp53.IMUX.4
+    SLICE_X30Y68.DX      net (fanout=3)        1.367   CAM_DATA_3_IBUF
+    SLICE_X30Y68.CLK     Tckdi       (-Th)    -0.041   camera0/y_latch/Qp<3>
+                                                       camera0/y_latch/Qp_3
+    -------------------------------------------------  ---------------------------
+    Total                                      1.997ns (0.630ns logic, 1.367ns route)
+                                                       (31.5% logic, 68.5% route)
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/i2c_master0/scl (SLICE_X50Y61.B4), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest path):   1.998ns (data path)
+  Source:               CAM_SIOC (PAD)
+  Destination:          camera_conf_block/i2c_master0/scl (FF)
+  Data Path Delay:      1.998ns (Levels of Logic = 2)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Minimum Data Path at Fast Process Corner: CAM_SIOC to camera_conf_block/i2c_master0/scl
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F13.I                Tiopi                 0.589   CAM_SIOC
+                                                       CAM_SIOC
+                                                       CAM_SIOC_IOBUF/IBUF
+                                                       ProtoComp55.IMUX
+    SLICE_X50Y61.B4      net (fanout=15)       1.212   N48
+    SLICE_X50Y61.CLK     Tah         (-Th)    -0.197   camera_conf_block/i2c_master0/scl
+                                                       camera_conf_block/i2c_master0/Mmux_scl_state[3]_MUX_205_o11
+                                                       camera_conf_block/i2c_master0/scl
+    -------------------------------------------------  ---------------------------
+    Total                                      1.998ns (0.786ns logic, 1.212ns route)
+                                                       (39.3% logic, 60.7% route)
+--------------------------------------------------------------------------------
+
+Paths for end point camera_conf_block/i2c_master0/sda (SLICE_X53Y61.C4), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest path):   2.007ns (data path)
+  Source:               CAM_SIOD (PAD)
+  Destination:          camera_conf_block/i2c_master0/sda (FF)
+  Data Path Delay:      2.007ns (Levels of Logic = 2)
+  Destination Clock:    clk_24 rising at 0.000ns
+
+  Minimum Data Path at Fast Process Corner: CAM_SIOD to camera_conf_block/i2c_master0/sda
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    F12.I                Tiopi                 0.589   CAM_SIOD
+                                                       CAM_SIOD
+                                                       CAM_SIOD_IOBUF/IBUF
+                                                       ProtoComp55.IMUX.1
+    SLICE_X53Y61.C4      net (fanout=11)       1.203   N49
+    SLICE_X53Y61.CLK     Tah         (-Th)    -0.215   camera_conf_block/i2c_master0/sda
+                                                       camera_conf_block/i2c_master0/Mmux_sda_state[3]_MUX_242_o11
+                                                       camera_conf_block/i2c_master0/sda
+    -------------------------------------------------  ---------------------------
+    Total                                      2.007ns (0.804ns logic, 1.203ns route)
+                                                       (40.1% logic, 59.9% route)
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TS12 = MAXDELAY FROM TIMEGRP "FFS" TO TIMEGRP "PADS" 10 ns;
+For more information, see From:To (Multicycle) Analysis in the Timing Closure User Guide (UG612).
+
+ 16 paths analyzed, 13 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Maximum delay is   8.535ns.
+--------------------------------------------------------------------------------
+
+Paths for end point LED<0> (P11.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  1.465ns (requirement - data path)
+  Source:               camera0/pixel_clock_out_t (FF)
+  Destination:          LED<0> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      8.535ns (Levels of Logic = 1)
+  Source Clock:         clk_96 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: camera0/pixel_clock_out_t to LED<0>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y68.BQ      Tcko                  0.391   camera0/vsynct
+                                                       camera0/pixel_clock_out_t
+    P11.O                net (fanout=6)        5.563   camera0/pixel_clock_out_t
+    P11.PAD              Tioop                 2.581   LED<0>
+                                                       LED_0_OBUF
+                                                       LED<0>
+    -------------------------------------------------  ---------------------------
+    Total                                      8.535ns (2.972ns logic, 5.563ns route)
+                                                       (34.8% logic, 65.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point LED<3> (P9.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.429ns (requirement - data path)
+  Source:               reset0/resetn_0 (FF)
+  Destination:          LED<3> (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      7.571ns (Levels of Logic = 1)
+  Source Clock:         clk0_BUFG rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: reset0/resetn_0 to LED<3>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X43Y54.AQ      Tcko                  0.391   reset0/counter0<4>
+                                                       reset0/resetn_0
+    P9.O                 net (fanout=10)       4.599   reset0/resetn_0
+    P9.PAD               Tioop                 2.581   LED<3>
+                                                       LED_3_OBUF
+                                                       LED<3>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.571ns (2.972ns logic, 4.599ns route)
+                                                       (39.3% logic, 60.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point CAM_SIOD (F12.PAD), 2 paths
+--------------------------------------------------------------------------------
+Slack (slowest paths):  4.361ns (requirement - data path)
+  Source:               camera_conf_block/i2c_master0/state[3]_clock_DFF_68 (FF)
+  Destination:          CAM_SIOD (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      5.639ns (Levels of Logic = 2)
+  Source Clock:         clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: camera_conf_block/i2c_master0/state[3]_clock_DFF_68 to CAM_SIOD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y61.CMUX    Tshcko                0.461   camera_conf_block/i2c_master0/sda
+                                                       camera_conf_block/i2c_master0/state[3]_clock_DFF_68
+    SLICE_X53Y61.D3      net (fanout=2)        0.325   camera_conf_block/i2c_master0/state[3]_clock_DFF_68
+    SLICE_X53Y61.D       Tilo                  0.259   camera_conf_block/i2c_master0/sda
+                                                       camera_conf_block/i2c_master0/state[3]_clock_DFF_68_inv1_INV_0
+    F12.T                net (fanout=1)        2.013   camera_conf_block/i2c_master0/state[3]_clock_DFF_68_inv
+    F12.PAD              Tiotp                 2.581   CAM_SIOD
+                                                       CAM_SIOD_IOBUF/OBUFT
+                                                       CAM_SIOD
+    -------------------------------------------------  ---------------------------
+    Total                                      5.639ns (3.301ns logic, 2.338ns route)
+                                                       (58.5% logic, 41.5% route)
+
+--------------------------------------------------------------------------------
+Slack (slowest paths):  4.999ns (requirement - data path)
+  Source:               camera_conf_block/i2c_master0/sda (FF)
+  Destination:          CAM_SIOD (PAD)
+  Requirement:          10.000ns
+  Data Path Delay:      5.001ns (Levels of Logic = 1)
+  Source Clock:         clk_24 rising at 0.000ns
+
+  Maximum Data Path at Slow Process Corner: camera_conf_block/i2c_master0/sda to CAM_SIOD
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X53Y61.CQ      Tcko                  0.391   camera_conf_block/i2c_master0/sda
+                                                       camera_conf_block/i2c_master0/sda
+    F12.O                net (fanout=1)        2.029   camera_conf_block/i2c_master0/sda
+    F12.PAD              Tioop                 2.581   CAM_SIOD
+                                                       CAM_SIOD_IOBUF/OBUFT
+                                                       CAM_SIOD
+    -------------------------------------------------  ---------------------------
+    Total                                      5.001ns (2.972ns logic, 2.029ns route)
+                                                       (59.4% logic, 40.6% route)
+
+--------------------------------------------------------------------------------
+Hold Paths: TS12 = MAXDELAY FROM TIMEGRP "FFS" TO TIMEGRP "PADS" 10 ns;
+--------------------------------------------------------------------------------
+
+Paths for end point CAM_XCLK (D12.PAD), 2 paths
+--------------------------------------------------------------------------------
+Delay (fastest path):   2.017ns (data path)
+  Source:               ODDR2_inst (FF)
+  Destination:          CAM_XCLK (PAD)
+  Data Path Delay:      2.017ns (Levels of Logic = 1)
+  Source Clock:         clk_24 rising at 0.000ns
+
+  Minimum Data Path at Fast Process Corner: ODDR2_inst to CAM_XCLK
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    OLOGIC_X22Y70.OQ     Tockq                 0.419   CAM_XCLK_OBUF
+                                                       ODDR2_inst
+    D12.O                net (fanout=1)        0.268   CAM_XCLK_OBUF
+    D12.PAD              Tioop                 1.330   CAM_XCLK
+                                                       CAM_XCLK_OBUF
+                                                       CAM_XCLK
+    -------------------------------------------------  ---------------------------
+    Total                                      2.017ns (1.749ns logic, 0.268ns route)
+                                                       (86.7% logic, 13.3% route)
+--------------------------------------------------------------------------------
+Delay (fastest path):   2.023ns (data path)
+  Source:               ODDR2_inst (FF)
+  Destination:          CAM_XCLK (PAD)
+  Data Path Delay:      2.023ns (Levels of Logic = 1)
+  Source Clock:         clk_24 falling at 20.833ns
+
+  Minimum Data Path at Fast Process Corner: ODDR2_inst to CAM_XCLK
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    OLOGIC_X22Y70.OQ     Tockq                 0.425   CAM_XCLK_OBUF
+                                                       ODDR2_inst
+    D12.O                net (fanout=1)        0.268   CAM_XCLK_OBUF
+    D12.PAD              Tioop                 1.330   CAM_XCLK
+                                                       CAM_XCLK_OBUF
+                                                       CAM_XCLK
+    -------------------------------------------------  ---------------------------
+    Total                                      2.023ns (1.755ns logic, 0.268ns route)
+                                                       (86.8% logic, 13.2% route)
+--------------------------------------------------------------------------------
+
+Paths for end point TMDSp<2> (C11.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest path):   2.273ns (data path)
+  Source:               HDMI_Encoder0/TMDS_shift_red_0 (FF)
+  Destination:          TMDSp<2> (PAD)
+  Data Path Delay:      2.273ns (Levels of Logic = 1)
+  Source Clock:         HDMI_Encoder0/clk_TMDS rising
+
+  Minimum Data Path at Fast Process Corner: HDMI_Encoder0/TMDS_shift_red_0 to TMDSp<2>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y66.AQ      Tcko                  0.234   HDMI_Encoder0/TMDS_shift_red<3>
+                                                       HDMI_Encoder0/TMDS_shift_red_0
+    C11.O                net (fanout=1)        1.443   HDMI_Encoder0/TMDS_shift_red<0>
+    C11.PAD              Tioop                 0.596   TMDSp<2>
+                                                       HDMI_Encoder0/OBUFDS_red/OBUFDS
+                                                       TMDSp<2>
+    -------------------------------------------------  ---------------------------
+    Total                                      2.273ns (0.830ns logic, 1.443ns route)
+                                                       (36.5% logic, 63.5% route)
+--------------------------------------------------------------------------------
+
+Paths for end point TMDSn<2> (A11.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest path):   2.289ns (data path)
+  Source:               HDMI_Encoder0/TMDS_shift_red_0 (FF)
+  Destination:          TMDSn<2> (PAD)
+  Data Path Delay:      2.289ns (Levels of Logic = 2)
+  Source Clock:         HDMI_Encoder0/clk_TMDS rising
+
+  Minimum Data Path at Fast Process Corner: HDMI_Encoder0/TMDS_shift_red_0 to TMDSn<2>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X30Y66.AQ      Tcko                  0.234   HDMI_Encoder0/TMDS_shift_red<3>
+                                                       HDMI_Encoder0/TMDS_shift_red_0
+    C11.O                net (fanout=1)        1.443   HDMI_Encoder0/TMDS_shift_red<0>
+    C11.DIFFO_OUT        Tiood                 0.604   TMDSp<2>
+                                                       HDMI_Encoder0/OBUFDS_red/OBUFDS
+    A11.DIFFO_IN         net (fanout=1)        0.000   HDMI_Encoder0/OBUFDS_red/SLAVEBUF.DIFFOUT
+    A11.PAD              Tiodop                0.008   TMDSn<2>
+                                                       ProtoComp51.DIFFO_INUSED.2
+                                                       TMDSn<2>
+    -------------------------------------------------  ---------------------------
+    Total                                      2.289ns (0.846ns logic, 1.443ns route)
+                                                       (37.0% logic, 63.0% route)
+--------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Derived Constraints for clk0
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|clk0                           |     31.250ns|     16.000ns|     24.000ns|            0|            0|         1488|         2590|
+| Inst_dcm96/CLKFX_BUF          |     10.417ns|      8.000ns|      6.505ns|            0|            0|           90|         2500|
+|  Inst_dcm24/CLKDV_BUF         |     41.667ns|     26.021ns|          N/A|            0|            0|         2500|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock CAM_PCLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+CAM_DATA<0> |    1.449(R)|      SLOW  |   -0.001(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_DATA<1> |    1.588(R)|      SLOW  |   -0.191(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_DATA<2> |    1.416(R)|      SLOW  |   -0.160(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_DATA<3> |    1.508(R)|      SLOW  |    0.010(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_DATA<4> |    1.239(R)|      SLOW  |    0.051(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_DATA<5> |    1.567(R)|      SLOW  |   -0.071(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_DATA<6> |    1.571(R)|      SLOW  |   -0.211(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_DATA<7> |    1.670(R)|      SLOW  |   -0.053(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_VSYNC   |    1.822(R)|      SLOW  |   -0.294(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock CLK
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+CAM_HREF    |    3.444(R)|      SLOW  |   -1.618(R)|      FAST  |clk_96            |   0.000|
+CAM_SIOC    |    6.227(R)|      SLOW  |   -1.245(R)|      FAST  |clk_24            |   0.000|
+CAM_SIOD    |    5.806(R)|      SLOW  |   -1.251(R)|      FAST  |clk_24            |   0.000|
+CAM_VSYNC   |    3.265(R)|      SLOW  |   -1.592(R)|      FAST  |clk_96            |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock CLK to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+CAM_SIOC    |         5.887(R)|      SLOW  |         3.254(R)|      FAST  |clk_24            |   0.000|
+CAM_SIOD    |         6.416(R)|      SLOW  |         3.298(R)|      FAST  |clk_24            |   0.000|
+CAM_XCLK    |         4.622(R)|      SLOW  |         2.386(R)|      FAST  |clk_24            |   0.000|
+            |         4.602(F)|      SLOW  |         2.392(F)|      FAST  |clk_24            |  20.833|
+LED<0>      |         9.257(R)|      SLOW  |         5.398(R)|      FAST  |clk_96            |   0.000|
+LED<3>      |        10.841(R)|      SLOW  |         5.955(R)|      FAST  |clk0_BUFG         |   0.000|
+TMDSn_clock |         5.247(R)|      SLOW  |         2.660(R)|      FAST  |clk_96            |   0.000|
+TMDSp_clock |         5.205(R)|      SLOW  |         2.644(R)|      FAST  |clk_96            |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    6.505|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 4376 paths, 0 nets, and 850 connections
+
+Design statistics:
+   Minimum period:  26.021ns{1}   (Maximum frequency:  38.431MHz)
+   Maximum path delay from/to any node:   8.535ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue Feb 10 19:39:10 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 421 MB
+
+
+

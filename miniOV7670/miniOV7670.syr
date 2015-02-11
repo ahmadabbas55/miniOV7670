@@ -1,0 +1,1004 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: miniOV7670.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "miniOV7670.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "miniOV7670"
+Output Format                      : NGC
+Target Device                      : xc6slx25-3-ftg256
+
+---- Source Options
+Top Module Name                    : miniOV7670
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/HDMI_Encoder.v" into library work
+Parsing module <HDMI_Encoder>.
+Parsing module <TMDS_encoder>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/i2c_master.vhd" into library work
+Parsing entity <i2c_master>.
+Parsing architecture <systemc> of entity <i2c_master>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/generic_latch.vhd" into library work
+Parsing entity <generic_latch>.
+Parsing architecture <Behavioral> of entity <generic_latch>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/edge_triggered_latch.vhd" into library work
+Parsing entity <edge_triggered_latch>.
+Parsing architecture <Behavioral> of entity <edge_triggered_latch>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/counter.vhd" into library work
+Parsing entity <simple_counter>.
+Parsing architecture <Behavioral> of entity <simple_counter>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" into library work
+Parsing entity <yuv_rgb>.
+Parsing architecture <Behavioral> of entity <yuv_rgb>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_register_rom.vhd" into library work
+Parsing entity <yuv_register_rom>.
+Parsing architecture <ov7670_qvga> of entity <yuv_register_rom>.
+Parsing architecture <ov7670_vga> of entity <yuv_register_rom>.
+Parsing architecture <ov7725_qvga> of entity <yuv_register_rom>.
+Parsing architecture <ov7725_vga> of entity <yuv_register_rom>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_camera_interface.vhd" into library work
+Parsing entity <yuv_camera_interface>.
+Parsing architecture <systemc> of entity <yuv_camera_interface>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/reset_generator.vhd" into library work
+Parsing entity <reset_generator>.
+Parsing architecture <Behavioral> of entity <reset_generator>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/i2c_conf.vhd" into library work
+Parsing entity <i2c_conf>.
+Parsing architecture <Behavioral> of entity <i2c_conf>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/dcm96.vhd" into library work
+Parsing entity <dcm96>.
+Parsing architecture <BEHAVIORAL> of entity <dcm96>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/dcm24.vhd" into library work
+Parsing entity <dcm24>.
+Parsing architecture <BEHAVIORAL> of entity <dcm24>.
+Parsing VHDL file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/miniOV7670.vhd" into library work
+Parsing entity <miniOV7670>.
+Parsing architecture <Structural> of entity <miniov7670>.
+WARNING:HDLCompiler:946 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/miniOV7670.vhd" Line 225: Actual for formal port c1 is neither a static name nor a globally static expression
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <miniOV7670> (architecture <Structural>) from library <work>.
+
+Elaborating entity <reset_generator> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <dcm96> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <dcm24> (architecture <BEHAVIORAL>) from library <work>.
+
+Elaborating entity <yuv_register_rom> (architecture <ov7670_vga>) from library <work>.
+
+Elaborating entity <i2c_conf> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <i2c_master> (architecture <systemc>) from library <work>.
+INFO:HDLCompiler:679 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/i2c_conf.vhd" Line 156. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:634 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/i2c_conf.vhd" Line 80: Net <rcv> does not have a driver.
+
+Elaborating entity <yuv_camera_interface> (architecture <systemc>) from library <work>.
+
+Elaborating entity <generic_latch> (architecture <Behavioral>) with generics from library <work>.
+WARNING:HDLCompiler:1127 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_camera_interface.vhd" Line 101: Assignment to pxclkt ignored, since the identifier is never used
+
+Elaborating entity <simple_counter> (architecture <Behavioral>) with generics from library <work>.
+
+Elaborating entity <yuv_rgb> (architecture <Behavioral>) from library <work>.
+WARNING:HDLCompiler:1127 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" Line 85: Assignment to c_298 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" Line 86: Assignment to d_100 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" Line 87: Assignment to d_516 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" Line 88: Assignment to e_409 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" Line 89: Assignment to e_208 ignored, since the identifier is never used
+
+Elaborating entity <edge_triggered_latch> (architecture <Behavioral>) with generics from library <work>.
+Going to verilog side to elaborate module HDMI_Encoder
+WARNING:HDLCompiler:1016 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/HDMI_Encoder.v" Line 36: Port CLK0 is not connected to this instance
+
+Elaborating module <HDMI_Encoder>.
+
+Elaborating module <TMDS_encoder>.
+
+Elaborating module <DCM_SP(CLKFX_MULTIPLY=10)>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <OBUFDS>.
+Back to vhdl to continue elaboration
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <miniOV7670>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/miniOV7670.vhd".
+WARNING:Xst:647 - Input <RXD> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/miniOV7670.vhd" line 202: Output port <CLK0_OUT> of the instance <Inst_dcm96> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/miniOV7670.vhd" line 210: Output port <CLK0_OUT> of the instance <Inst_dcm24> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/miniOV7670.vhd" line 267: Output port <pixel_clock_out> of the instance <yuv_rgb0> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <miniOV7670> synthesized.
+
+Synthesizing Unit <reset_generator>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/reset_generator.vhd".
+        HOLD_0 = 50000
+WARNING:Xst:647 - Input <resetn> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <resetn_0>.
+    Found 31-bit register for signal <counter0>.
+    Found 31-bit subtractor for signal <GND_7_o_GND_7_o_sub_2_OUT<30:0>> created at line 58.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+Unit <reset_generator> synthesized.
+
+Synthesizing Unit <dcm96>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/dcm96.vhd".
+    Summary:
+	no macro.
+Unit <dcm96> synthesized.
+
+Synthesizing Unit <dcm24>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/dcm24.vhd".
+    Summary:
+	no macro.
+Unit <dcm24> synthesized.
+
+Synthesizing Unit <yuv_register_rom>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_register_rom.vhd".
+WARNING:Xst:2999 - Signal 'rom', unconnected in block 'yuv_register_rom', is tied to its initial value.
+WARNING:Xst:3035 - Index value(s) does not match array range for signal <rom>, simulation mismatch.
+    Found 160x16-bit single-port Read Only RAM <Mram_rom> for signal <rom>.
+    Found 16-bit register for signal <data>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  16 D-type flip-flop(s).
+Unit <yuv_register_rom> synthesized.
+
+Synthesizing Unit <i2c_conf>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/i2c_conf.vhd".
+        ADD_WIDTH = 8
+        SLAVE_ADD = "0100001"
+WARNING:Xst:647 - Input <clock> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/i2c_conf.vhd" line 85: Output port <data_out> of the instance <i2c_master0> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <rcv> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Found 8-bit register for signal <reg_addr_temp>.
+    Found 3-bit register for signal <reg_state>.
+    Found 1-bit register for signal <send>.
+    Found 8-bit register for signal <i2c_data>.
+    Found finite state machine <FSM_0> for signal <reg_state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 22                                             |
+    | Inputs             | 6                                              |
+    | Outputs            | 3                                              |
+    | Clock              | i2c_clk (rising_edge)                          |
+    | Reset              | resetn (negative)                              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | init                                           |
+    | Power Up State     | init                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <reg_addr_temp[7]_GND_15_o_add_6_OUT> created at line 134.
+    Found 1-bit 7-to-1 multiplexer for signal <reg_state[2]_X_12_o_Mux_18_o> created at line 110.
+    Found 8-bit comparator greater for signal <reg_addr_temp[7]_PWR_16_o_LessThan_13_o> created at line 146
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  17 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   7 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <i2c_conf> synthesized.
+
+Synthesizing Unit <i2c_master>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/i2c_master.vhd".
+    Found 4-bit register for signal <state>.
+    Found 8-bit register for signal <tick_count>.
+    Found 8-bit register for signal <bit_count>.
+    Found 1-bit register for signal <state[3]_clock_DFF_50_q>.
+    Found 1-bit register for signal <state[3]_clock_DFF_67>.
+    Found 1-bit register for signal <state[3]_clock_DFF_68>.
+    Found 1-bit register for signal <state[3]_clock_DFF_49_q>.
+    Found 1-bit register for signal <dispo>.
+    Found 1-bit register for signal <ack_byte>.
+    Found 1-bit register for signal <nack_byte>.
+    Found 8-bit register for signal <slave_addr_i>.
+    Found 1-bit register for signal <send_rvcb>.
+    Found 8-bit register for signal <data_i>.
+    Found 8-bit register for signal <data_out>.
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 9                                              |
+    | Transitions        | 29                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 7                                              |
+    | Clock              | clock (rising_edge)                            |
+    | Reset              | resetn (negative)                              |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 8-bit adder for signal <bit_count[7]_GND_16_o_add_83_OUT> created at line 216.
+    Found 8-bit adder for signal <tick_count[7]_GND_16_o_add_124_OUT> created at line 291.
+    Found 8-bit 9-to-1 multiplexer for signal <state[3]_X_13_o_wide_mux_140_OUT> created at line 59.
+    Found 1-bit tristate buffer for signal <scl> created at line 50
+    Found 1-bit tristate buffer for signal <sda> created at line 50
+    Found 8-bit comparator greater for signal <tick_count[7]_GND_16_o_LessThan_36_o> created at line 133
+    Found 8-bit comparator greater for signal <tick_count[7]_GND_16_o_LessThan_38_o> created at line 137
+    Found 8-bit comparator greater for signal <bit_count[7]_GND_16_o_LessThan_78_o> created at line 203
+    Found 8-bit comparator greater for signal <tick_count[7]_GND_16_o_LessThan_96_o> created at line 228
+    Found 8-bit comparator greater for signal <tick_count[7]_GND_16_o_LessThan_121_o> created at line 281
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  48 D-type flip-flop(s).
+	inferred   5 Comparator(s).
+	inferred  74 Multiplexer(s).
+	inferred   2 Tristate(s).
+	inferred   1 Finite State Machine(s).
+Unit <i2c_master> synthesized.
+
+Synthesizing Unit <yuv_camera_interface>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_camera_interface.vhd".
+    Found 1-bit register for signal <vsynct>.
+    Found 1-bit register for signal <pixel_clock_out_t>.
+    Found 1-bit register for signal <vsync_old>.
+    Found 1-bit register for signal <hsynct>.
+    Found 4x2-bit Read Only RAM for signal <_n0023>
+    Summary:
+	inferred   1 RAM(s).
+	inferred   4 D-type flip-flop(s).
+Unit <yuv_camera_interface> synthesized.
+
+Synthesizing Unit <generic_latch>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/generic_latch.vhd".
+        NBIT = 8
+    Found 8-bit register for signal <Qp>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <generic_latch> synthesized.
+
+Synthesizing Unit <simple_counter>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/counter.vhd".
+        NBIT = 2
+    Found 2-bit register for signal <Qp>.
+    Found 2-bit adder for signal <Qp[1]_Qp[1]_mux_1_OUT> created at line 66.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <simple_counter> synthesized.
+
+Synthesizing Unit <yuv_rgb>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd".
+    Found 1-bit register for signal <hsync_out>.
+    Found 1-bit register for signal <vsync_out>.
+    Found 1-bit register for signal <DE_out>.
+    Found 1-bit register for signal <pixel_clock_out>.
+    Found 16-bit adder for signal <yl[15]_vl[15]_add_11_OUT> created at line 97.
+    Found 16-bit adder for signal <pixel_g_t> created at line 98.
+    Found 16-bit adder for signal <yl[15]_ul[14]_add_16_OUT> created at line 99.
+    Found 16-bit subtractor for signal <pixel_r_t> created at line 67.
+    Found 16-bit subtractor for signal <yl[15]_ul[15]_sub_14_OUT<15:0>> created at line 98.
+    Found 16-bit subtractor for signal <n0074> created at line 0.
+    Found 16-bit subtractor for signal <pixel_b_t> created at line 67.
+    Found 16-bit comparator greater for signal <pixel_r_t[15]_GND_33_o_LessThan_19_o> created at line 102
+    Found 16-bit comparator greater for signal <GND_33_o_pixel_r_t[15]_LessThan_20_o> created at line 103
+    Found 16-bit comparator greater for signal <pixel_g_t[15]_GND_33_o_LessThan_23_o> created at line 106
+    Found 16-bit comparator greater for signal <GND_33_o_pixel_g_t[15]_LessThan_24_o> created at line 107
+    Found 16-bit comparator greater for signal <pixel_b_t[15]_GND_33_o_LessThan_27_o> created at line 110
+    Found 16-bit comparator greater for signal <GND_33_o_pixel_b_t[15]_LessThan_28_o> created at line 111
+    Summary:
+	inferred   7 Adder/Subtractor(s).
+	inferred   4 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   6 Multiplexer(s).
+Unit <yuv_rgb> synthesized.
+
+Synthesizing Unit <edge_triggered_latch>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/edge_triggered_latch.vhd".
+        NBIT = 8
+        POL = '1'
+    Found 8-bit register for signal <Qp>.
+    Found 1-bit register for signal <old_value>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <edge_triggered_latch> synthesized.
+
+Synthesizing Unit <HDMI_Encoder>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/HDMI_Encoder.v".
+    Found 10-bit register for signal <TMDS_shift_red>.
+    Found 10-bit register for signal <TMDS_shift_green>.
+    Found 10-bit register for signal <TMDS_shift_blue>.
+    Found 4-bit register for signal <TMDS_mod10>.
+    Found 1-bit register for signal <TMDS_shift_load>.
+    Found 4-bit adder for signal <TMDS_mod10[3]_GND_39_o_add_7_OUT> created at line 50.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  35 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
+Unit <HDMI_Encoder> synthesized.
+
+Synthesizing Unit <TMDS_encoder>.
+    Related source file is "/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/HDMI_Encoder.v".
+    Found 4-bit register for signal <balance_acc>.
+    Found 10-bit register for signal <TMDS>.
+    Found 4-bit subtractor for signal <balance_acc_inc> created at line 77.
+    Found 4-bit subtractor for signal <balance_acc[3]_balance_acc_inc[3]_sub_29_OUT> created at line 78.
+    Found 2-bit adder for signal <n0109[1:0]> created at line 69.
+    Found 3-bit adder for signal <n0112[2:0]> created at line 69.
+    Found 2-bit adder for signal <n0130[1:0]> created at line 74.
+    Found 3-bit adder for signal <n0133[2:0]> created at line 74.
+    Found 4-bit adder for signal <balance_acc[3]_balance_acc_inc[3]_add_29_OUT> created at line 78.
+    Found 4-bit adder for signal <_n0160> created at line 69.
+    Found 4-bit adder for signal <_n0161> created at line 69.
+    Found 4-bit adder for signal <_n0162> created at line 69.
+    Found 4-bit adder for signal <_n0163> created at line 69.
+    Found 4-bit adder for signal <Nb1s> created at line 69.
+    Found 4-bit adder for signal <_n0165> created at line 74.
+    Found 4-bit subtractor for signal <_n0166> created at line 74.
+    Found 4-bit adder for signal <_n0167> created at line 74.
+    Found 4-bit adder for signal <_n0168> created at line 74.
+    Found 4-bit adder for signal <_n0169> created at line 74.
+    Found 4-bit adder for signal <balance> created at line 74.
+    Found 4-bit comparator greater for signal <GND_40_o_Nb1s[3]_LessThan_8_o> created at line 70
+    Found 1-bit comparator equal for signal <balance_sign_eq> created at line 75
+    Summary:
+	inferred  17 Adder/Subtractor(s).
+	inferred  14 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <TMDS_encoder> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 160x16-bit single-port Read Only RAM                  : 1
+ 4x2-bit single-port Read Only RAM                     : 1
+# Adders/Subtractors                                   : 64
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 4
+ 2-bit adder                                           : 7
+ 3-bit adder                                           : 6
+ 31-bit subtractor                                     : 1
+ 4-bit adder                                           : 31
+ 4-bit addsub                                          : 3
+ 4-bit subtractor                                      : 6
+ 8-bit adder                                           : 3
+# Registers                                            : 48
+ 1-bit register                                        : 22
+ 10-bit register                                       : 6
+ 16-bit register                                       : 1
+ 2-bit register                                        : 1
+ 31-bit register                                       : 1
+ 4-bit register                                        : 4
+ 8-bit register                                        : 13
+# Comparators                                          : 18
+ 1-bit comparator equal                                : 3
+ 16-bit comparator greater                             : 6
+ 4-bit comparator greater                              : 3
+ 8-bit comparator greater                              : 6
+# Multiplexers                                         : 106
+ 1-bit 2-to-1 multiplexer                              : 48
+ 1-bit 7-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 9
+ 2-bit 2-to-1 multiplexer                              : 1
+ 8-bit 2-to-1 multiplexer                              : 46
+ 8-bit 9-to-1 multiplexer                              : 1
+# Tristates                                            : 2
+ 1-bit tristate buffer                                 : 2
+# FSMs                                                 : 2
+# Xors                                                 : 17
+ 1-bit xor2                                            : 8
+ 7-bit xor2                                            : 6
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <HDMI_Encoder>.
+The following registers are absorbed into counter <TMDS_mod10>: 1 register on signal <TMDS_mod10>.
+Unit <HDMI_Encoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <TMDS_encoder>.
+The following registers are absorbed into accumulator <balance_acc>: 1 register on signal <balance_acc>.
+	The following adders/subtractors are grouped into adder tree <Madd_balance_Madd1> :
+ 	<Madd__n0169_Madd> in block <TMDS_encoder>, 	<Madd_n0130[1:0]> in block <TMDS_encoder>, 	<Madd_balance_Madd> in block <TMDS_encoder>.
+	The following adders/subtractors are grouped into adder tree <Madd_Nb1s_Madd1> :
+ 	<Madd__n0160> in block <TMDS_encoder>, 	<Madd__n0161> in block <TMDS_encoder>, 	<Madd__n0163_Madd> in block <TMDS_encoder>, 	<Madd_n0109[1:0]> in block <TMDS_encoder>, 	<Madd_Nb1s_Madd> in block <TMDS_encoder>.
+Unit <TMDS_encoder> synthesized (advanced).
+
+Synthesizing (advanced) Unit <i2c_conf>.
+The following registers are absorbed into counter <reg_addr_temp>: 1 register on signal <reg_addr_temp>.
+Unit <i2c_conf> synthesized (advanced).
+
+Synthesizing (advanced) Unit <reset_generator>.
+The following registers are absorbed into counter <counter0>: 1 register on signal <counter0>.
+Unit <reset_generator> synthesized (advanced).
+
+Synthesizing (advanced) Unit <yuv_camera_interface>.
+INFO:Xst:3218 - HDL ADVISOR - The RAM <Mram__n0023> will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 2-bit                      |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <cpt_nb_pixel>  |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <yuv_camera_interface> synthesized (advanced).
+
+Synthesizing (advanced) Unit <yuv_register_rom>.
+INFO:Xst:3226 - The RAM <Mram_rom> will be implemented as a BLOCK RAM, absorbing the following register(s): <data>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 160-word x 16-bit                   |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <data>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <yuv_register_rom> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 160x16-bit single-port block Read Only RAM            : 1
+ 4x2-bit single-port distributed Read Only RAM         : 1
+# Adders/Subtractors                                   : 19
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 4
+ 2-bit adder                                           : 1
+ 4-bit adder carry in                                  : 3
+ 4-bit subtractor                                      : 6
+ 8-bit adder                                           : 2
+# Adder Trees                                          : 6
+ 4-bit / 4-inputs adder tree                           : 3
+ 4-bit / 6-inputs adder tree                           : 3
+# Counters                                             : 3
+ 31-bit down counter                                   : 1
+ 4-bit up counter                                      : 1
+ 8-bit up counter                                      : 1
+# Accumulators                                         : 3
+ 4-bit updown accumulator                              : 3
+# Registers                                            : 180
+ Flip-Flops                                            : 180
+# Comparators                                          : 18
+ 1-bit comparator equal                                : 3
+ 16-bit comparator greater                             : 6
+ 4-bit comparator greater                              : 3
+ 8-bit comparator greater                              : 6
+# Multiplexers                                         : 105
+ 1-bit 2-to-1 multiplexer                              : 48
+ 1-bit 7-to-1 multiplexer                              : 1
+ 10-bit 2-to-1 multiplexer                             : 9
+ 8-bit 2-to-1 multiplexer                              : 46
+ 8-bit 9-to-1 multiplexer                              : 1
+# FSMs                                                 : 2
+# Xors                                                 : 17
+ 1-bit xor2                                            : 8
+ 7-bit xor2                                            : 6
+ 8-bit xor2                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <camera_conf_block/FSM_0> on signal <reg_state[1:3]> with sequential encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ init      | 000
+ send_addr | 001
+ wait_ack0 | 010
+ send_data | 011
+ wait_ack1 | 101
+ next_reg  | 100
+ stop      | 110
+-----------------------
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <camera_conf_block/i2c_master0/FSM_1> on signal <state[1:4]> with user encoding.
+-----------------------
+ State     | Encoding
+-----------------------
+ idle      | 0000
+ i2c_start | 0001
+ tx_addr   | 0010
+ ack_addr  | 0011
+ tx_byte   | 0100
+ rx_byte   | 0101
+ ack       | 0110
+ holding   | 0111
+ i2c_stop  | 1000
+-----------------------
+WARNING:Xst:1293 - FF/Latch <slave_addr_i_0> has a constant value of 0 in block <i2c_master>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <camera_conf_block/i2c_master0/data_out_7> of sequential type is unconnected in block <miniOV7670>.
+WARNING:Xst:2677 - Node <camera_conf_block/i2c_master0/data_out_6> of sequential type is unconnected in block <miniOV7670>.
+WARNING:Xst:2677 - Node <camera_conf_block/i2c_master0/data_out_5> of sequential type is unconnected in block <miniOV7670>.
+WARNING:Xst:2677 - Node <camera_conf_block/i2c_master0/data_out_4> of sequential type is unconnected in block <miniOV7670>.
+WARNING:Xst:2677 - Node <camera_conf_block/i2c_master0/data_out_3> of sequential type is unconnected in block <miniOV7670>.
+WARNING:Xst:2677 - Node <camera_conf_block/i2c_master0/data_out_2> of sequential type is unconnected in block <miniOV7670>.
+WARNING:Xst:2677 - Node <camera_conf_block/i2c_master0/data_out_1> of sequential type is unconnected in block <miniOV7670>.
+WARNING:Xst:2677 - Node <camera_conf_block/i2c_master0/data_out_0> of sequential type is unconnected in block <miniOV7670>.
+
+Optimizing unit <miniOV7670> ...
+WARNING:Xst:1293 - FF/Latch <camera_conf_block/i2c_master0/bit_count_7> has a constant value of 0 in block <miniOV7670>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <camera_conf_block/i2c_master0/bit_count_7> has a constant value of 0 in block <miniOV7670>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <camera_conf_block/i2c_master0/bit_count_5> has a constant value of 0 in block <miniOV7670>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <camera_conf_block/i2c_master0/bit_count_4> has a constant value of 0 in block <miniOV7670>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <camera_conf_block/i2c_master0/bit_count_6> has a constant value of 0 in block <miniOV7670>. This FF/Latch will be trimmed during the optimization process.
+
+Optimizing unit <yuv_camera_interface> ...
+
+Optimizing unit <yuv_rgb> ...
+
+Optimizing unit <edge_triggered_latch> ...
+
+Optimizing unit <HDMI_Encoder> ...
+
+Optimizing unit <TMDS_encoder> ...
+WARNING:Xst:1293 - FF/Latch <camera_conf_block/i2c_master0/bit_count_6> has a constant value of 0 in block <miniOV7670>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <camera_conf_block/i2c_master0/bit_count_5> has a constant value of 0 in block <miniOV7670>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1293 - FF/Latch <camera_conf_block/i2c_master0/bit_count_4> has a constant value of 0 in block <miniOV7670>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <yuv_rgb0/pixel_clock_out> of sequential type is unconnected in block <miniOV7670>.
+WARNING:Xst:1293 - FF/Latch <camera_conf_block/i2c_master0/tick_count_7> has a constant value of 0 in block <miniOV7670>. This FF/Latch will be trimmed during the optimization process.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+INFO:Xst:2261 - The FF/Latch <yuv_rgb0/pixel_b_latch0/old_value> in Unit <miniOV7670> is equivalent to the following 2 FFs/Latches, which will be removed : <yuv_rgb0/pixel_g_latch0/old_value> <yuv_rgb0/pixel_r_latch0/old_value> 
+Found area constraint ratio of 100 (+ 5) on block miniOV7670, actual ratio is 4.
+FlipFlop HDMI_Encoder0/TMDS_shift_load has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 226
+ Flip-Flops                                            : 226
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : miniOV7670.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 588
+#      GND                         : 1
+#      INV                         : 42
+#      LUT1                        : 17
+#      LUT2                        : 40
+#      LUT3                        : 88
+#      LUT4                        : 68
+#      LUT5                        : 65
+#      LUT6                        : 128
+#      MUXCY                       : 63
+#      MUXF7                       : 8
+#      VCC                         : 1
+#      XORCY                       : 67
+# FlipFlops/Latches                : 227
+#      FD                          : 76
+#      FDC                         : 28
+#      FDCE                        : 60
+#      FDE                         : 25
+#      FDR                         : 37
+#      ODDR2                       : 1
+# RAMS                             : 1
+#      RAMB8BWER                   : 1
+# Clock Buffers                    : 8
+#      BUFG                        : 7
+#      BUFGP                       : 1
+# IO Buffers                       : 27
+#      IBUF                        : 10
+#      IBUFG                       : 1
+#      IOBUF                       : 2
+#      OBUF                        : 10
+#      OBUFDS                      : 4
+# DCMs                             : 3
+#      DCM_SP                      : 3
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx25ftg256-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             227  out of  30064     0%  
+ Number of Slice LUTs:                  448  out of  15032     2%  
+    Number used as Logic:               448  out of  15032     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    486
+   Number with an unused Flip Flop:     259  out of    486    53%  
+   Number with an unused LUT:            38  out of    486     7%  
+   Number of fully used LUT-FF pairs:   189  out of    486    38%  
+   Number of unique control sets:        19
+
+IO Utilization: 
+ Number of IOs:                          35
+ Number of bonded IOBs:                  32  out of    186    17%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:                1  out of     52     1%  
+    Number using Block RAM only:          1
+ Number of BUFG/BUFGCTRLs:                8  out of     16    50%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+--------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)    | Load  |
+-----------------------------------+--------------------------+-------+
+CLK                                | IBUFG+BUFG               | 32    |
+CLK                                | DCM_SP:CLKFX+DCM_SP:CLKDV| 60    |
+CAM_PCLK                           | BUFGP                    | 27    |
+CLK                                | DCM_SP:CLKFX             | 32    |
+camera0/pixel_clock_out_t          | DCM_SP:CLKFX             | 36    |
+camera0/pixel_clock_out_t          | BUFG                     | 42    |
+-----------------------------------+--------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 20.479ns (Maximum Frequency: 48.832MHz)
+   Minimum input arrival time before clock: 7.117ns
+   Maximum output required time after clock: 4.419ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 17.281ns (frequency: 57.866MHz)
+  Total number of paths / destination ports: 4082 / 248
+-------------------------------------------------------------------------
+Delay:               5.760ns (Levels of Logic = 3)
+  Source:            conf_rom/Mram_rom (RAM)
+  Destination:       camera_conf_block/i2c_data_7 (FF)
+  Source Clock:      CLK rising 3.0X
+  Destination Clock: CLK rising 0.8X
+
+  Data Path: conf_rom/Mram_rom to camera_conf_block/i2c_data_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB8BWER:CLKAWRCLK->DOADO5    2   1.650   0.981  conf_rom/Mram_rom (rom_data<5>)
+     LUT6:I0->O            1   0.203   0.684  camera_conf_block/n0017<15>2 (camera_conf_block/n0017<15>1)
+     LUT6:I4->O            4   0.203   0.684  camera_conf_block/n0017<15>3 (camera_conf_block/n0017)
+     LUT6:I5->O            9   0.205   0.829  camera_conf_block/_n0110_inv111 (camera_conf_block/_n0110_inv11)
+     FDE:CE                    0.322          camera_conf_block/i2c_data_0
+    ----------------------------------------
+    Total                      5.760ns (2.583ns logic, 3.177ns route)
+                                       (44.8% logic, 55.2% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'CAM_PCLK'
+  Clock period: 2.622ns (frequency: 381.345MHz)
+  Total number of paths / destination ports: 45 / 26
+-------------------------------------------------------------------------
+Delay:               2.622ns (Levels of Logic = 1)
+  Source:            camera0/pixel_counter/Qp_0 (FF)
+  Destination:       camera0/v_latch/Qp_0 (FF)
+  Source Clock:      CAM_PCLK rising
+  Destination Clock: CAM_PCLK rising
+
+  Data Path: camera0/pixel_counter/Qp_0 to camera0/v_latch/Qp_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              6   0.447   0.849  camera0/pixel_counter/Qp_0 (camera0/pixel_counter/Qp_0)
+     LUT2:I0->O            8   0.203   0.802  camera0/Mram__n002311 (camera0/Mram__n0023)
+     FDCE:CE                   0.322          camera0/v_latch/Qp_0
+    ----------------------------------------
+    Total                      2.622ns (0.972ns logic, 1.650ns route)
+                                       (37.1% logic, 62.9% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'camera0/pixel_clock_out_t'
+  Clock period: 20.479ns (frequency: 48.832MHz)
+  Total number of paths / destination ports: 563 / 75
+-------------------------------------------------------------------------
+Delay:               2.048ns (Levels of Logic = 1)
+  Source:            HDMI_Encoder0/TMDS_mod10_0 (FF)
+  Destination:       HDMI_Encoder0/TMDS_mod10_0 (FF)
+  Source Clock:      camera0/pixel_clock_out_t rising 10.0X
+  Destination Clock: camera0/pixel_clock_out_t rising 10.0X
+
+  Data Path: HDMI_Encoder0/TMDS_mod10_0 to HDMI_Encoder0/TMDS_mod10_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               5   0.447   0.714  HDMI_Encoder0/TMDS_mod10_0 (HDMI_Encoder0/TMDS_mod10_0)
+     INV:I->O              1   0.206   0.579  HDMI_Encoder0/TMDS_mod10_0_rstpot_INV_0 (HDMI_Encoder0/TMDS_mod10_0_rstpot)
+     FD:D                      0.102          HDMI_Encoder0/TMDS_mod10_0
+    ----------------------------------------
+    Total                      2.048ns (0.755ns logic, 1.293ns route)
+                                       (36.9% logic, 63.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK'
+  Total number of paths / destination ports: 105 / 37
+-------------------------------------------------------------------------
+Offset:              7.117ns (Levels of Logic = 7)
+  Source:            CAM_SIOD (PAD)
+  Destination:       camera_conf_block/i2c_master0/tick_count_4 (FF)
+  Destination Clock: CLK rising 0.8X
+
+  Data Path: CAM_SIOD to camera_conf_block/i2c_master0/tick_count_4
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IOBUF:IO->O          11   1.222   1.130  CAM_SIOD_IOBUF (N49)
+     LUT6:I2->O            1   0.203   0.924  camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1011 (camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1011)
+     LUT6:I1->O            2   0.203   0.617  camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1013 (camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1013)
+     LUT6:I5->O            1   0.205   0.000  camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1016_G (N83)
+     MUXF7:I1->O           7   0.140   1.138  camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT1016 (camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT101)
+     LUT6:I0->O            1   0.203   0.827  camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT101 (camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT10)
+     LUT4:I0->O            1   0.203   0.000  camera_conf_block/i2c_master0/Mmux_state[3]_X_13_o_wide_mux_140_OUT105 (camera_conf_block/i2c_master0/state[3]_X_13_o_wide_mux_140_OUT<4>)
+     FDC:D                     0.102          camera_conf_block/i2c_master0/tick_count_4
+    ----------------------------------------
+    Total                      7.117ns (2.481ns logic, 4.636ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CAM_PCLK'
+  Total number of paths / destination ports: 27 / 27
+-------------------------------------------------------------------------
+Offset:              2.315ns (Levels of Logic = 2)
+  Source:            CAM_VSYNC (PAD)
+  Destination:       camera0/pixel_counter/Qp_0 (FF)
+  Destination Clock: CAM_PCLK rising
+
+  Data Path: CAM_VSYNC to camera0/pixel_counter/Qp_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             4   1.222   0.788  CAM_VSYNC_IBUF (CAM_VSYNC_IBUF)
+     LUT4:I2->O            1   0.203   0.000  camera0/pixel_counter/Mmux_Qp[1]_GND_30_o_mux_3_OUT21 (camera0/pixel_counter/Qp[1]_GND_30_o_mux_3_OUT<1>)
+     FDC:D                     0.102          camera0/pixel_counter/Qp_1
+    ----------------------------------------
+    Total                      2.315ns (1.527ns logic, 0.788ns route)
+                                       (66.0% logic, 34.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'camera0/pixel_clock_out_t'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            HDMI_Encoder0/TMDS_shift_red_0 (FF)
+  Destination:       TMDSp<2> (PAD)
+  Source Clock:      camera0/pixel_clock_out_t rising 10.0X
+
+  Data Path: HDMI_Encoder0/TMDS_shift_red_0 to TMDSp<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.447   0.579  HDMI_Encoder0/TMDS_shift_red_0 (HDMI_Encoder0/TMDS_shift_red_0)
+     OBUFDS:I->O               2.571          HDMI_Encoder0/OBUFDS_red (TMDSp<2>)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 8 / 6
+-------------------------------------------------------------------------
+Offset:              4.419ns (Levels of Logic = 2)
+  Source:            camera_conf_block/i2c_master0/state[3]_clock_DFF_67 (FF)
+  Destination:       CAM_SIOC (PAD)
+  Source Clock:      CLK rising 0.8X
+
+  Data Path: camera_conf_block/i2c_master0/state[3]_clock_DFF_67 to CAM_SIOC
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.447   0.616  camera_conf_block/i2c_master0/state[3]_clock_DFF_67 (camera_conf_block/i2c_master0/state[3]_clock_DFF_67)
+     INV:I->O              1   0.206   0.579  camera_conf_block/i2c_master0/state[3]_clock_DFF_67_inv1_INV_0 (camera_conf_block/i2c_master0/state[3]_clock_DFF_67_inv)
+     IOBUF:T->IO               2.571          CAM_SIOC_IOBUF (CAM_SIOC)
+    ----------------------------------------
+    Total                      4.419ns (3.224ns logic, 1.195ns route)
+                                       (73.0% logic, 27.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock CAM_PCLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAM_PCLK       |    2.622|         |         |         |
+CLK            |    3.737|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAM_PCLK       |    9.149|         |         |         |
+CLK            |    7.109|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock camera0/pixel_clock_out_t
+-------------------------+---------+---------+---------+---------+
+                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+-------------------------+---------+---------+---------+---------+
+CLK                      |   13.932|         |         |         |
+camera0/pixel_clock_out_t|    5.684|         |         |         |
+-------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 9.00 secs
+Total CPU time to Xst completion: 8.97 secs
+ 
+--> 
+
+
+Total memory usage is 411652 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :    7 (   0 filtered)
+

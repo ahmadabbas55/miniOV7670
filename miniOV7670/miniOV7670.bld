@@ -1,0 +1,45 @@
+Release 14.7 ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -nt timestamp -uc ipcore_dir/miniSpartan6plus.ucf -p
+xc6slx25-ftg256-3 miniOV7670.ngc miniOV7670.ngd
+
+Reading NGO file "/home/ufarooq/VHDL/miniOV7670/miniOV7670/miniOV7670.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "ipcore_dir/miniSpartan6plus.ucf"
+...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem - The Period constraint <PERIOD = 31.25ns;>
+   [ipcore_dir/miniSpartan6plus.ucf(4)], is specified using the Net Period
+   method which is not recommended. Please use the Timespec PERIOD method.
+
+INFO:ConstraintSystem - The Period constraint <PERIOD = 41.6ns;>
+   [ipcore_dir/miniSpartan6plus.ucf(20)], is specified using the Net Period
+   method which is not recommended. Please use the Timespec PERIOD method.
+
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 406580 kilobytes
+
+Writing NGD file "miniOV7670.ngd" ...
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
+
+Writing NGDBUILD log file "miniOV7670.bld"...

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="946" delta="old" >"/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/miniOV7670.vhd" Line 225: Actual for formal port <arg fmt="%s" index="1">c1</arg> is neither a static name nor a globally static expression
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="old" >"/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/i2c_conf.vhd" Line 80: Net &lt;<arg fmt="%s" index="1">rcv</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_camera_interface.vhd" Line 101: Assignment to <arg fmt="%s" index="1">pxclkt</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" Line 85: Assignment to <arg fmt="%s" index="1">c_298</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" Line 86: Assignment to <arg fmt="%s" index="1">d_100</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" Line 87: Assignment to <arg fmt="%s" index="1">d_516</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" Line 88: Assignment to <arg fmt="%s" index="1">e_409</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/yuv_rgb.vhd" Line 89: Assignment to <arg fmt="%s" index="1">e_208</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/HDMI_Encoder.v" Line 36: Port <arg fmt="%s" index="1">CLK0</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">RXD</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/miniOV7670.vhd</arg>&quot; line <arg fmt="%s" index="2">202</arg>: Output port &lt;<arg fmt="%s" index="3">CLK0_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_dcm96</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/miniOV7670.vhd</arg>&quot; line <arg fmt="%s" index="2">210</arg>: Output port &lt;<arg fmt="%s" index="3">CLK0_OUT</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_dcm24</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/miniOV7670.vhd</arg>&quot; line <arg fmt="%s" index="2">267</arg>: Output port &lt;<arg fmt="%s" index="3">pixel_clock_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">yuv_rgb0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">resetn</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="2999" delta="old" >Signal &apos;<arg fmt="%s" index="1">rom</arg>&apos;, unconnected in block &apos;<arg fmt="%s" index="2">yuv_register_rom</arg>&apos;, is tied to its initial value.
+</msg>
+
+<msg type="warning" file="Xst" num="3035" delta="old" >Index value(s) does not match array range for signal &lt;<arg fmt="%s" index="1">rom</arg>&gt;, simulation mismatch.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">clock</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/ufarooq/VHDL/miniOV7670/miniOV7670/ipcore_dir/i2c_conf.vhd</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">data_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">i2c_master0</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">rcv</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="info" file="Xst" num="3218" delta="old" >HDL ADVISOR - The RAM &lt;<arg fmt="%s" index="1">Mram__n0023</arg>&gt; will be implemented on LUTs either because you have described an asynchronous read or because of currently unsupported block RAM features. If you have described an asynchronous read, making it synchronous would allow you to take advantage of available block RAM resources, for optimized device usage and improved timings. Please refer to your documentation for coding guidelines.
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_rom</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">slave_addr_i_0</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">i2c_master</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/data_out_7</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">miniOV7670</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/data_out_6</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">miniOV7670</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/data_out_5</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">miniOV7670</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/data_out_4</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">miniOV7670</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/data_out_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">miniOV7670</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/data_out_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">miniOV7670</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/data_out_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">miniOV7670</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/data_out_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">miniOV7670</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/bit_count_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">miniOV7670</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/bit_count_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">miniOV7670</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/bit_count_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">miniOV7670</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/bit_count_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">miniOV7670</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/bit_count_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">miniOV7670</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/bit_count_6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">miniOV7670</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/bit_count_5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">miniOV7670</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/bit_count_4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">miniOV7670</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">yuv_rgb0/pixel_clock_out</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">miniOV7670</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">camera_conf_block/i2c_master0/tick_count_7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">miniOV7670</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">yuv_rgb0/pixel_b_latch0/old_value</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">miniOV7670</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">2 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;yuv_rgb0/pixel_g_latch0/old_value&gt; &lt;yuv_rgb0/pixel_r_latch0/old_value&gt; </arg>
+</msg>
+
+</messages>
+
